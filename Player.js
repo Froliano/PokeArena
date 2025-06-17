@@ -14,7 +14,6 @@ class Player extends Entity {
 
     winXP(amount) {
         this.xp += amount;
-        console.log(`${this.name} gained ${amount} XP. Total XP: ${this.xp}`);
         if (this.xp >= 100) {
             this.levelUp();
             this.xp -= 100;

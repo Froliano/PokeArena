@@ -23,7 +23,6 @@ class Entity {
 
 
     die() {
-        console.log(`${this.name} has died.`);
         this.isAlive = false;
     }
 }

@@ -1,0 +1,1059 @@
+[
+  {
+    "name": "bulbasaur",
+    "attack": 64,
+    "armor": 70,
+    "hp": 78,
+    "sprite": "bulbasaur.gif"
+  },
+  {
+    "name": "ivysaur",
+    "attack": 69,
+    "armor": 83,
+    "hp": 63,
+    "sprite": "ivysaur.gif"
+  },
+  {
+    "name": "venusaur",
+    "attack": 66,
+    "armor": 86,
+    "hp": 62,
+    "sprite": "venusaur.gif"
+  },
+  {
+    "name": "charmander",
+    "attack": 85,
+    "armor": 76,
+    "hp": 76,
+    "sprite": "charmander.gif"
+  },
+  {
+    "name": "charmeleon",
+    "attack": 68,
+    "armor": 90,
+    "hp": 76,
+    "sprite": "charmeleon.gif"
+  },
+  {
+    "name": "charizard",
+    "attack": 87,
+    "armor": 65,
+    "hp": 71,
+    "sprite": "charizard.gif"
+  },
+  {
+    "name": "squirtle",
+    "attack": 66,
+    "armor": 83,
+    "hp": 87,
+    "sprite": "squirtle.gif"
+  },
+  {
+    "name": "wartortle",
+    "attack": 68,
+    "armor": 64,
+    "hp": 89,
+    "sprite": "wartortle.gif"
+  },
+  {
+    "name": "blastoise",
+    "attack": 67,
+    "armor": 79,
+    "hp": 88,
+    "sprite": "blastoise.gif"
+  },
+  {
+    "name": "caterpie",
+    "attack": 71,
+    "armor": 61,
+    "hp": 73,
+    "sprite": "caterpie.gif"
+  },
+  {
+    "name": "metapod",
+    "attack": 61,
+    "armor": 65,
+    "hp": 80,
+    "sprite": "metapod.gif"
+  },
+  {
+    "name": "butterfree",
+    "attack": 60,
+    "armor": 81,
+    "hp": 65,
+    "sprite": "butterfree.gif"
+  },
+  {
+    "name": "weedle",
+    "attack": 75,
+    "armor": 70,
+    "hp": 62,
+    "sprite": "weedle.gif"
+  },
+  {
+    "name": "kakuna",
+    "attack": 82,
+    "armor": 90,
+    "hp": 87,
+    "sprite": "kakuna.gif"
+  },
+  {
+    "name": "beedrill",
+    "attack": 82,
+    "armor": 75,
+    "hp": 68,
+    "sprite": "beedrill.gif"
+  },
+  {
+    "name": "pidgey",
+    "attack": 89,
+    "armor": 75,
+    "hp": 64,
+    "sprite": "pidgey.gif"
+  },
+  {
+    "name": "pidgeotto",
+    "attack": 83,
+    "armor": 60,
+    "hp": 83,
+    "sprite": "pidgeotto.gif"
+  },
+  {
+    "name": "pidgeot",
+    "attack": 64,
+    "armor": 68,
+    "hp": 88,
+    "sprite": "pidgeot.gif"
+  },
+  {
+    "name": "rattata",
+    "attack": 62,
+    "armor": 87,
+    "hp": 76,
+    "sprite": "rattata.gif"
+  },
+  {
+    "name": "raticate",
+    "attack": 71,
+    "armor": 86,
+    "hp": 73,
+    "sprite": "raticate.gif"
+  },
+  {
+    "name": "spearow",
+    "attack": 67,
+    "armor": 65,
+    "hp": 80,
+    "sprite": "spearow.gif"
+  },
+  {
+    "name": "fearow",
+    "attack": 81,
+    "armor": 75,
+    "hp": 90,
+    "sprite": "fearow.gif"
+  },
+  {
+    "name": "ekans",
+    "attack": 86,
+    "armor": 88,
+    "hp": 62,
+    "sprite": "ekans.gif"
+  },
+  {
+    "name": "arbok",
+    "attack": 62,
+    "armor": 62,
+    "hp": 87,
+    "sprite": "arbok.gif"
+  },
+  {
+    "name": "pikachu",
+    "attack": 60,
+    "armor": 79,
+    "hp": 60,
+    "sprite": "pikachu.gif"
+  },
+  {
+    "name": "raichu",
+    "attack": 62,
+    "armor": 87,
+    "hp": 79,
+    "sprite": "raichu.gif"
+  },
+  {
+    "name": "sandshrew",
+    "attack": 64,
+    "armor": 86,
+    "hp": 90,
+    "sprite": "sandshrew.gif"
+  },
+  {
+    "name": "sandslash",
+    "attack": 74,
+    "armor": 63,
+    "hp": 88,
+    "sprite": "sandslash.gif"
+  },
+  {
+    "name": "nidoranf",
+    "attack": 73,
+    "armor": 78,
+    "hp": 80,
+    "sprite": "nidoranf.gif"
+  },
+  {
+    "name": "nidorina",
+    "attack": 62,
+    "armor": 85,
+    "hp": 82,
+    "sprite": "nidorina.gif"
+  },
+  {
+    "name": "nidoqueen",
+    "attack": 60,
+    "armor": 62,
+    "hp": 60,
+    "sprite": "nidoqueen.gif"
+  },
+  {
+    "name": "nidoranm",
+    "attack": 64,
+    "armor": 90,
+    "hp": 62,
+    "sprite": "nidoranm.gif"
+  },
+  {
+    "name": "nidorino",
+    "attack": 85,
+    "armor": 78,
+    "hp": 77,
+    "sprite": "nidorino.gif"
+  },
+  {
+    "name": "nidoking",
+    "attack": 82,
+    "armor": 79,
+    "hp": 84,
+    "sprite": "nidoking.gif"
+  },
+  {
+    "name": "clefairy",
+    "attack": 90,
+    "armor": 66,
+    "hp": 69,
+    "sprite": "clefairy.gif"
+  },
+  {
+    "name": "clefable",
+    "attack": 73,
+    "armor": 79,
+    "hp": 90,
+    "sprite": "clefable.gif"
+  },
+  {
+    "name": "vulpix",
+    "attack": 66,
+    "armor": 68,
+    "hp": 81,
+    "sprite": "vulpix.gif"
+  },
+  {
+    "name": "ninetales",
+    "attack": 86,
+    "armor": 60,
+    "hp": 85,
+    "sprite": "ninetales.gif"
+  },
+  {
+    "name": "jigglypuff",
+    "attack": 68,
+    "armor": 67,
+    "hp": 62,
+    "sprite": "jigglypuff.gif"
+  },
+  {
+    "name": "wigglytuff",
+    "attack": 74,
+    "armor": 66,
+    "hp": 67,
+    "sprite": "wigglytuff.gif"
+  },
+  {
+    "name": "zubat",
+    "attack": 74,
+    "armor": 77,
+    "hp": 73,
+    "sprite": "zubat.gif"
+  },
+  {
+    "name": "golbat",
+    "attack": 85,
+    "armor": 67,
+    "hp": 83,
+    "sprite": "golbat.gif"
+  },
+  {
+    "name": "oddish",
+    "attack": 69,
+    "armor": 60,
+    "hp": 77,
+    "sprite": "oddish.gif"
+  },
+  {
+    "name": "gloom",
+    "attack": 87,
+    "armor": 70,
+    "hp": 74,
+    "sprite": "gloom.gif"
+  },
+  {
+    "name": "vileplume",
+    "attack": 72,
+    "armor": 87,
+    "hp": 81,
+    "sprite": "vileplume.gif"
+  },
+  {
+    "name": "paras",
+    "attack": 78,
+    "armor": 84,
+    "hp": 82,
+    "sprite": "paras.gif"
+  },
+  {
+    "name": "parasect",
+    "attack": 90,
+    "armor": 84,
+    "hp": 61,
+    "sprite": "parasect.gif"
+  },
+  {
+    "name": "venonat",
+    "attack": 66,
+    "armor": 77,
+    "hp": 90,
+    "sprite": "venonat.gif"
+  },
+  {
+    "name": "venomoth",
+    "attack": 76,
+    "armor": 82,
+    "hp": 86,
+    "sprite": "venomoth.gif"
+  },
+  {
+    "name": "diglett",
+    "attack": 79,
+    "armor": 90,
+    "hp": 69,
+    "sprite": "diglett.gif"
+  },
+  {
+    "name": "dugtrio",
+    "attack": 88,
+    "armor": 89,
+    "hp": 61,
+    "sprite": "dugtrio.gif"
+  },
+  {
+    "name": "meowth",
+    "attack": 63,
+    "armor": 69,
+    "hp": 85,
+    "sprite": "meowth.gif"
+  },
+  {
+    "name": "persian",
+    "attack": 89,
+    "armor": 62,
+    "hp": 76,
+    "sprite": "persian.gif"
+  },
+  {
+    "name": "psyduck",
+    "attack": 64,
+    "armor": 66,
+    "hp": 67,
+    "sprite": "psyduck.gif"
+  },
+  {
+    "name": "golduck",
+    "attack": 82,
+    "armor": 87,
+    "hp": 60,
+    "sprite": "golduck.gif"
+  },
+  {
+    "name": "mankey",
+    "attack": 66,
+    "armor": 75,
+    "hp": 68,
+    "sprite": "mankey.gif"
+  },
+  {
+    "name": "primeape",
+    "attack": 72,
+    "armor": 85,
+    "hp": 70,
+    "sprite": "primeape.gif"
+  },
+  {
+    "name": "growlithe",
+    "attack": 74,
+    "armor": 75,
+    "hp": 81,
+    "sprite": "growlithe.gif"
+  },
+  {
+    "name": "arcanine",
+    "attack": 70,
+    "armor": 84,
+    "hp": 75,
+    "sprite": "arcanine.gif"
+  },
+  {
+    "name": "poliwag",
+    "attack": 88,
+    "armor": 79,
+    "hp": 66,
+    "sprite": "poliwag.gif"
+  },
+  {
+    "name": "poliwhirl",
+    "attack": 63,
+    "armor": 87,
+    "hp": 88,
+    "sprite": "poliwhirl.gif"
+  },
+  {
+    "name": "poliwrath",
+    "attack": 72,
+    "armor": 76,
+    "hp": 69,
+    "sprite": "poliwrath.gif"
+  },
+  {
+    "name": "abra",
+    "attack": 66,
+    "armor": 61,
+    "hp": 82,
+    "sprite": "abra.gif"
+  },
+  {
+    "name": "kadabra",
+    "attack": 86,
+    "armor": 60,
+    "hp": 85,
+    "sprite": "kadabra.gif"
+  },
+  {
+    "name": "alakazam",
+    "attack": 78,
+    "armor": 75,
+    "hp": 62,
+    "sprite": "alakazam.gif"
+  },
+  {
+    "name": "machop",
+    "attack": 81,
+    "armor": 89,
+    "hp": 77,
+    "sprite": "machop.gif"
+  },
+  {
+    "name": "machoke",
+    "attack": 87,
+    "armor": 71,
+    "hp": 84,
+    "sprite": "machoke.gif"
+  },
+  {
+    "name": "machamp",
+    "attack": 61,
+    "armor": 64,
+    "hp": 83,
+    "sprite": "machamp.gif"
+  },
+  {
+    "name": "bellsprout",
+    "attack": 69,
+    "armor": 64,
+    "hp": 72,
+    "sprite": "bellsprout.gif"
+  },
+  {
+    "name": "weepinbell",
+    "attack": 72,
+    "armor": 86,
+    "hp": 87,
+    "sprite": "weepinbell.gif"
+  },
+  {
+    "name": "victreebel",
+    "attack": 89,
+    "armor": 82,
+    "hp": 85,
+    "sprite": "victreebel.gif"
+  },
+  {
+    "name": "tentacool",
+    "attack": 84,
+    "armor": 68,
+    "hp": 66,
+    "sprite": "tentacool.gif"
+  },
+  {
+    "name": "tentacruel",
+    "attack": 80,
+    "armor": 68,
+    "hp": 84,
+    "sprite": "tentacruel.gif"
+  },
+  {
+    "name": "geodude",
+    "attack": 65,
+    "armor": 62,
+    "hp": 63,
+    "sprite": "geodude.gif"
+  },
+  {
+    "name": "graveler",
+    "attack": 87,
+    "armor": 78,
+    "hp": 72,
+    "sprite": "graveler.gif"
+  },
+  {
+    "name": "golem",
+    "attack": 87,
+    "armor": 75,
+    "hp": 79,
+    "sprite": "golem.gif"
+  },
+  {
+    "name": "ponyta",
+    "attack": 71,
+    "armor": 75,
+    "hp": 60,
+    "sprite": "ponyta.gif"
+  },
+  {
+    "name": "rapidash",
+    "attack": 71,
+    "armor": 62,
+    "hp": 67,
+    "sprite": "rapidash.gif"
+  },
+  {
+    "name": "slowpoke",
+    "attack": 79,
+    "armor": 79,
+    "hp": 73,
+    "sprite": "slowpoke.gif"
+  },
+  {
+    "name": "slowbro",
+    "attack": 89,
+    "armor": 83,
+    "hp": 75,
+    "sprite": "slowbro.gif"
+  },
+  {
+    "name": "magnemite",
+    "attack": 89,
+    "armor": 81,
+    "hp": 73,
+    "sprite": "magnemite.gif"
+  },
+  {
+    "name": "magneton",
+    "attack": 70,
+    "armor": 83,
+    "hp": 71,
+    "sprite": "magneton.gif"
+  },
+  {
+    "name": "farfetchd",
+    "attack": 85,
+    "armor": 60,
+    "hp": 78,
+    "sprite": "farfetchd.gif"
+  },
+  {
+    "name": "doduo",
+    "attack": 82,
+    "armor": 83,
+    "hp": 82,
+    "sprite": "doduo.gif"
+  },
+  {
+    "name": "dodrio",
+    "attack": 87,
+    "armor": 79,
+    "hp": 74,
+    "sprite": "dodrio.gif"
+  },
+  {
+    "name": "seel",
+    "attack": 84,
+    "armor": 70,
+    "hp": 87,
+    "sprite": "seel.gif"
+  },
+  {
+    "name": "dewgong",
+    "attack": 66,
+    "armor": 76,
+    "hp": 61,
+    "sprite": "dewgong.gif"
+  },
+  {
+    "name": "grimer",
+    "attack": 89,
+    "armor": 67,
+    "hp": 61,
+    "sprite": "grimer.gif"
+  },
+  {
+    "name": "muk",
+    "attack": 60,
+    "armor": 63,
+    "hp": 82,
+    "sprite": "muk.gif"
+  },
+  {
+    "name": "shellder",
+    "attack": 60,
+    "armor": 65,
+    "hp": 90,
+    "sprite": "shellder.gif"
+  },
+  {
+    "name": "cloyster",
+    "attack": 84,
+    "armor": 67,
+    "hp": 81,
+    "sprite": "cloyster.gif"
+  },
+  {
+    "name": "gastly",
+    "attack": 86,
+    "armor": 79,
+    "hp": 78,
+    "sprite": "gastly.gif"
+  },
+  {
+    "name": "haunter",
+    "attack": 89,
+    "armor": 89,
+    "hp": 84,
+    "sprite": "haunter.gif"
+  },
+  {
+    "name": "gengar",
+    "attack": 84,
+    "armor": 62,
+    "hp": 85,
+    "sprite": "gengar.gif"
+  },
+  {
+    "name": "onix",
+    "attack": 79,
+    "armor": 75,
+    "hp": 90,
+    "sprite": "onix.gif"
+  },
+  {
+    "name": "drowzee",
+    "attack": 72,
+    "armor": 89,
+    "hp": 89,
+    "sprite": "drowzee.gif"
+  },
+  {
+    "name": "hypno",
+    "attack": 68,
+    "armor": 84,
+    "hp": 88,
+    "sprite": "hypno.gif"
+  },
+  {
+    "name": "krabby",
+    "attack": 62,
+    "armor": 62,
+    "hp": 81,
+    "sprite": "krabby.gif"
+  },
+  {
+    "name": "kingler",
+    "attack": 66,
+    "armor": 84,
+    "hp": 85,
+    "sprite": "kingler.gif"
+  },
+  {
+    "name": "voltorb",
+    "attack": 65,
+    "armor": 88,
+    "hp": 85,
+    "sprite": "voltorb.gif"
+  },
+  {
+    "name": "electrode",
+    "attack": 67,
+    "armor": 77,
+    "hp": 81,
+    "sprite": "electrode.gif"
+  },
+  {
+    "name": "exeggcute",
+    "attack": 86,
+    "armor": 73,
+    "hp": 76,
+    "sprite": "exeggcute.gif"
+  },
+  {
+    "name": "exeggutor",
+    "attack": 68,
+    "armor": 77,
+    "hp": 79,
+    "sprite": "exeggutor.gif"
+  },
+  {
+    "name": "cubone",
+    "attack": 89,
+    "armor": 61,
+    "hp": 69,
+    "sprite": "cubone.gif"
+  },
+  {
+    "name": "marowak",
+    "attack": 64,
+    "armor": 81,
+    "hp": 65,
+    "sprite": "marowak.gif"
+  },
+  {
+    "name": "hitmonlee",
+    "attack": 60,
+    "armor": 62,
+    "hp": 74,
+    "sprite": "hitmonlee.gif"
+  },
+  {
+    "name": "hitmonchan",
+    "attack": 78,
+    "armor": 75,
+    "hp": 81,
+    "sprite": "hitmonchan.gif"
+  },
+  {
+    "name": "lickitung",
+    "attack": 69,
+    "armor": 88,
+    "hp": 70,
+    "sprite": "lickitung.gif"
+  },
+  {
+    "name": "koffing",
+    "attack": 71,
+    "armor": 68,
+    "hp": 87,
+    "sprite": "koffing.gif"
+  },
+  {
+    "name": "weezing",
+    "attack": 83,
+    "armor": 63,
+    "hp": 64,
+    "sprite": "weezing.gif"
+  },
+  {
+    "name": "rhyhorn",
+    "attack": 74,
+    "armor": 60,
+    "hp": 60,
+    "sprite": "rhyhorn.gif"
+  },
+  {
+    "name": "rhydon",
+    "attack": 86,
+    "armor": 63,
+    "hp": 67,
+    "sprite": "rhydon.gif"
+  },
+  {
+    "name": "chansey",
+    "attack": 81,
+    "armor": 60,
+    "hp": 80,
+    "sprite": "chansey.gif"
+  },
+  {
+    "name": "tangela",
+    "attack": 83,
+    "armor": 73,
+    "hp": 87,
+    "sprite": "tangela.gif"
+  },
+  {
+    "name": "kangaskhan",
+    "attack": 68,
+    "armor": 80,
+    "hp": 71,
+    "sprite": "kangaskhan.gif"
+  },
+  {
+    "name": "horsea",
+    "attack": 79,
+    "armor": 75,
+    "hp": 71,
+    "sprite": "horsea.gif"
+  },
+  {
+    "name": "seadra",
+    "attack": 76,
+    "armor": 79,
+    "hp": 64,
+    "sprite": "seadra.gif"
+  },
+  {
+    "name": "goldeen",
+    "attack": 89,
+    "armor": 83,
+    "hp": 66,
+    "sprite": "goldeen.gif"
+  },
+  {
+    "name": "seaking",
+    "attack": 76,
+    "armor": 67,
+    "hp": 63,
+    "sprite": "seaking.gif"
+  },
+  {
+    "name": "staryu",
+    "attack": 85,
+    "armor": 66,
+    "hp": 65,
+    "sprite": "staryu.gif"
+  },
+  {
+    "name": "starmie",
+    "attack": 79,
+    "armor": 62,
+    "hp": 72,
+    "sprite": "starmie.gif"
+  },
+  {
+    "name": "mr.mime",
+    "attack": 71,
+    "armor": 76,
+    "hp": 79,
+    "sprite": "mr.mime.gif"
+  },
+  {
+    "name": "scyther",
+    "attack": 89,
+    "armor": 60,
+    "hp": 89,
+    "sprite": "scyther.gif"
+  },
+  {
+    "name": "jynx",
+    "attack": 66,
+    "armor": 75,
+    "hp": 74,
+    "sprite": "jynx.gif"
+  },
+  {
+    "name": "electabuzz",
+    "attack": 61,
+    "armor": 71,
+    "hp": 62,
+    "sprite": "electabuzz.gif"
+  },
+  {
+    "name": "magmar",
+    "attack": 62,
+    "armor": 86,
+    "hp": 82,
+    "sprite": "magmar.gif"
+  },
+  {
+    "name": "pinsir",
+    "attack": 76,
+    "armor": 78,
+    "hp": 67,
+    "sprite": "pinsir.gif"
+  },
+  {
+    "name": "tauros",
+    "attack": 64,
+    "armor": 81,
+    "hp": 79,
+    "sprite": "tauros.gif"
+  },
+  {
+    "name": "magikarp",
+    "attack": 76,
+    "armor": 82,
+    "hp": 75,
+    "sprite": "magikarp.gif"
+  },
+  {
+    "name": "gyarados",
+    "attack": 83,
+    "armor": 81,
+    "hp": 72,
+    "sprite": "gyarados.gif"
+  },
+  {
+    "name": "lapras",
+    "attack": 76,
+    "armor": 73,
+    "hp": 77,
+    "sprite": "lapras.gif"
+  },
+  {
+    "name": "ditto",
+    "attack": 86,
+    "armor": 89,
+    "hp": 87,
+    "sprite": "ditto.gif"
+  },
+  {
+    "name": "eevee",
+    "attack": 76,
+    "armor": 65,
+    "hp": 69,
+    "sprite": "eevee.gif"
+  },
+  {
+    "name": "vaporeon",
+    "attack": 61,
+    "armor": 65,
+    "hp": 89,
+    "sprite": "vaporeon.gif"
+  },
+  {
+    "name": "jolteon",
+    "attack": 61,
+    "armor": 72,
+    "hp": 78,
+    "sprite": "jolteon.gif"
+  },
+  {
+    "name": "flareon",
+    "attack": 87,
+    "armor": 78,
+    "hp": 76,
+    "sprite": "flareon.gif"
+  },
+  {
+    "name": "porygon",
+    "attack": 81,
+    "armor": 81,
+    "hp": 83,
+    "sprite": "porygon.gif"
+  },
+  {
+    "name": "omanyte",
+    "attack": 82,
+    "armor": 67,
+    "hp": 90,
+    "sprite": "omanyte.gif"
+  },
+  {
+    "name": "omastar",
+    "attack": 64,
+    "armor": 86,
+    "hp": 78,
+    "sprite": "omastar.gif"
+  },
+  {
+    "name": "kabuto",
+    "attack": 60,
+    "armor": 86,
+    "hp": 87,
+    "sprite": "kabuto.gif"
+  },
+  {
+    "name": "kabutops",
+    "attack": 60,
+    "armor": 61,
+    "hp": 85,
+    "sprite": "kabutops.gif"
+  },
+  {
+    "name": "aerodactyl",
+    "attack": 78,
+    "armor": 80,
+    "hp": 82,
+    "sprite": "aerodactyl.gif"
+  },
+  {
+    "name": "snorlax",
+    "attack": 89,
+    "armor": 89,
+    "hp": 85,
+    "sprite": "snorlax.gif"
+  },
+  {
+    "name": "articuno",
+    "attack": 61,
+    "armor": 60,
+    "hp": 64,
+    "sprite": "articuno.gif"
+  },
+  {
+    "name": "zapdos",
+    "attack": 80,
+    "armor": 87,
+    "hp": 85,
+    "sprite": "zapdos.gif"
+  },
+  {
+    "name": "moltres",
+    "attack": 71,
+    "armor": 74,
+    "hp": 80,
+    "sprite": "moltres.gif"
+  },
+  {
+    "name": "dratini",
+    "attack": 85,
+    "armor": 60,
+    "hp": 89,
+    "sprite": "dratini.gif"
+  },
+  {
+    "name": "dragonair",
+    "attack": 65,
+    "armor": 64,
+    "hp": 82,
+    "sprite": "dragonair.gif"
+  },
+  {
+    "name": "dragonite",
+    "attack": 82,
+    "armor": 87,
+    "hp": 90,
+    "sprite": "dragonite.gif"
+  },
+  {
+    "name": "mewtwo",
+    "attack": 63,
+    "armor": 88,
+    "hp": 68,
+    "sprite": "mewtwo.gif"
+  },
+  {
+    "name": "mew",
+    "attack": 82,
+    "armor": 75,
+    "hp": 71,
+    "sprite": "mew.gif"
+  }
+]

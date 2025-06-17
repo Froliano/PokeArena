@@ -1,13 +1,10 @@
-import Player from './player.js';
+import Player from './Player.js';
 import Entity from './Entity.js';
 import { logMsg } from './utils.js';
+import {currentChapter, currentWave, currentChapterNumber, setCurrentChapterchapter} from './wave.js';
 
-const player = new Player('Héros', 10, 20, 100);
+const player = new Player('Heros', 100, 50, 200);
 
-const slime = new Entity('Slime', 10, 5, 20);
-const gobelin = new Entity('Gobelin', 15, 10, 30);
-
-let ennemiesChapiter1 = [slime, gobelin];
 let playerTurn = true;
 let win = false;
 
@@ -17,44 +14,51 @@ const opponentHpBar = document.getElementById('opponent-hp');
 const playerHpText = document.getElementById('player-hp-text');
 const opponentHpText = document.getElementById('opponent-hp-text');
 const attackButton = document.getElementById('attack-button');
+const playerName = document.getElementById('pokemon-player');
+const opponentName = document.getElementById('pokemon-opponent');
+const opponentImage = document.getElementById('opponent-pokemon');
 
+playerName.textContent = player.name;
+
+await setCurrentChapterchapter();
 update();
 
-
-
-function update() {
+async function update() {
+    opponentName.textContent = currentWave[0].name;
+    opponentImage.src = `https://play.pokemonshowdown.com/sprites/gen5ani/${currentChapter[0].sprite}`;
     playerHpBar.style.width = (player.currentHP / player.maxHP * 100) + '%';
     playerXpBar.style.width = (player.xp / 100 * 100) + '%';
-    opponentHpBar.style.width = (ennemiesChapiter1[0].currentHP / ennemiesChapiter1[0].maxHP * 100) + '%';
+    opponentHpBar.style.width = (currentWave[0].currentHP / currentWave[0].maxHP * 100) + '%';
     playerHpText.textContent = `${player.currentHP} / ${player.maxHP} HP`;
-    opponentHpText.textContent = `${ennemiesChapiter1[0].currentHP} / ${ennemiesChapiter1[0].maxHP} HP`;
+    opponentHpText.textContent = `${currentWave[0].currentHP} / ${currentWave[0].maxHP} HP`;
     attackButton.disabled = !playerTurn || win;
 }
 
 function winTheChapter() {
-    console.log('Vous avez gagné le chapitre !');
+    logMsg('Vous avez gagné le chapitre !');
     win = true;
 };
     
 
 function ennemisTurn() {
-    ennemiesChapiter1[0].actionAttack(player);
+    currentWave[0].actionAttack(player);
     playerTurn = true;
     update();
 }
 
 attackButton.addEventListener('click', () => {
-    player.actionAttack(ennemiesChapiter1[0]);
+    player.actionAttack(currentWave[0]);
     playerTurn = false;
-    if (!ennemiesChapiter1[0].isAlive) {
-        if (ennemiesChapiter1.length === 1) {
+    if (!currentWave[0].isAlive) {
+        if (currentWave.length === 1) {
             winTheChapter();
         }
         else {
-            ennemiesChapiter1.shift();
+            currentWave.shift();
+            currentChapter.shift();
         }
         playerTurn = true;
-        logMsg(`${ennemiesChapiter1[0].name} a été vaincu !`);
+        logMsg(`${currentWave[0].name} a été vaincu !`);
     }
     update();
     if(!win && !playerTurn) {
