@@ -1,1056 +1,1057 @@
 [
   {
-    "name": "bulbasaur",
+    "name": "Bulbasaur",
     "attack": 64,
     "armor": 70,
     "hp": 78,
     "sprite": "bulbasaur.gif"
   },
   {
-    "name": "ivysaur",
+    "name": "Ivysaur",
     "attack": 69,
     "armor": 83,
     "hp": 63,
     "sprite": "ivysaur.gif"
   },
   {
-    "name": "venusaur",
+    "name": "Venusaur",
     "attack": 66,
     "armor": 86,
     "hp": 62,
     "sprite": "venusaur.gif"
   },
   {
-    "name": "charmander",
+    "name": "Charmander",
     "attack": 85,
     "armor": 76,
     "hp": 76,
     "sprite": "charmander.gif"
   },
   {
-    "name": "charmeleon",
+    "name": "Charmeleon",
     "attack": 68,
     "armor": 90,
     "hp": 76,
     "sprite": "charmeleon.gif"
   },
   {
-    "name": "charizard",
+    "name": "Charizard",
     "attack": 87,
     "armor": 65,
     "hp": 71,
     "sprite": "charizard.gif"
   },
   {
-    "name": "squirtle",
+    "name": "Squirtle",
     "attack": 66,
     "armor": 83,
     "hp": 87,
     "sprite": "squirtle.gif"
   },
   {
-    "name": "wartortle",
+    "name": "Wartortle",
     "attack": 68,
     "armor": 64,
     "hp": 89,
     "sprite": "wartortle.gif"
   },
   {
-    "name": "blastoise",
+    "name": "Blastoise",
     "attack": 67,
     "armor": 79,
     "hp": 88,
     "sprite": "blastoise.gif"
   },
   {
-    "name": "caterpie",
+    "name": "Caterpie",
     "attack": 71,
     "armor": 61,
     "hp": 73,
     "sprite": "caterpie.gif"
   },
   {
-    "name": "metapod",
+    "name": "Metapod",
     "attack": 61,
     "armor": 65,
     "hp": 80,
     "sprite": "metapod.gif"
   },
   {
-    "name": "butterfree",
+    "name": "Butterfree",
     "attack": 60,
     "armor": 81,
     "hp": 65,
     "sprite": "butterfree.gif"
   },
   {
-    "name": "weedle",
+    "name": "Weedle",
     "attack": 75,
     "armor": 70,
     "hp": 62,
     "sprite": "weedle.gif"
   },
   {
-    "name": "kakuna",
+    "name": "Kakuna",
     "attack": 82,
     "armor": 90,
     "hp": 87,
     "sprite": "kakuna.gif"
   },
   {
-    "name": "beedrill",
+    "name": "Beedrill",
     "attack": 82,
     "armor": 75,
     "hp": 68,
     "sprite": "beedrill.gif"
   },
   {
-    "name": "pidgey",
+    "name": "Pidgey",
     "attack": 89,
     "armor": 75,
     "hp": 64,
     "sprite": "pidgey.gif"
   },
   {
-    "name": "pidgeotto",
+    "name": "Pidgeotto",
     "attack": 83,
     "armor": 60,
     "hp": 83,
     "sprite": "pidgeotto.gif"
   },
   {
-    "name": "pidgeot",
+    "name": "Pidgeot",
     "attack": 64,
     "armor": 68,
     "hp": 88,
     "sprite": "pidgeot.gif"
   },
   {
-    "name": "rattata",
+    "name": "Rattata",
     "attack": 62,
     "armor": 87,
     "hp": 76,
     "sprite": "rattata.gif"
   },
   {
-    "name": "raticate",
+    "name": "Raticate",
     "attack": 71,
     "armor": 86,
     "hp": 73,
     "sprite": "raticate.gif"
   },
   {
-    "name": "spearow",
+    "name": "Spearow",
     "attack": 67,
     "armor": 65,
     "hp": 80,
     "sprite": "spearow.gif"
   },
   {
-    "name": "fearow",
+    "name": "Fearow",
     "attack": 81,
     "armor": 75,
     "hp": 90,
     "sprite": "fearow.gif"
   },
   {
-    "name": "ekans",
+    "name": "Ekans",
     "attack": 86,
     "armor": 88,
     "hp": 62,
     "sprite": "ekans.gif"
   },
   {
-    "name": "arbok",
+    "name": "Arbok",
     "attack": 62,
     "armor": 62,
     "hp": 87,
     "sprite": "arbok.gif"
   },
   {
-    "name": "pikachu",
+    "name": "Pikachu",
     "attack": 60,
     "armor": 79,
     "hp": 60,
     "sprite": "pikachu.gif"
   },
   {
-    "name": "raichu",
+    "name": "Raichu",
     "attack": 62,
     "armor": 87,
     "hp": 79,
     "sprite": "raichu.gif"
   },
   {
-    "name": "sandshrew",
+    "name": "Sandshrew",
     "attack": 64,
     "armor": 86,
     "hp": 90,
     "sprite": "sandshrew.gif"
   },
   {
-    "name": "sandslash",
+    "name": "Sandslash",
     "attack": 74,
     "armor": 63,
     "hp": 88,
     "sprite": "sandslash.gif"
   },
   {
-    "name": "nidoranf",
+    "name": "Nidoranf",
     "attack": 73,
     "armor": 78,
     "hp": 80,
     "sprite": "nidoranf.gif"
   },
   {
-    "name": "nidorina",
+    "name": "Nidorina",
     "attack": 62,
     "armor": 85,
     "hp": 82,
     "sprite": "nidorina.gif"
   },
   {
-    "name": "nidoqueen",
+    "name": "Nidoqueen",
     "attack": 60,
     "armor": 62,
     "hp": 60,
     "sprite": "nidoqueen.gif"
   },
   {
-    "name": "nidoranm",
+    "name": "Nidoranm",
     "attack": 64,
     "armor": 90,
     "hp": 62,
     "sprite": "nidoranm.gif"
   },
   {
-    "name": "nidorino",
+    "name": "Nidorino",
     "attack": 85,
     "armor": 78,
     "hp": 77,
     "sprite": "nidorino.gif"
   },
   {
-    "name": "nidoking",
+    "name": "Nidoking",
     "attack": 82,
     "armor": 79,
     "hp": 84,
     "sprite": "nidoking.gif"
   },
   {
-    "name": "clefairy",
+    "name": "Clefairy",
     "attack": 90,
     "armor": 66,
     "hp": 69,
     "sprite": "clefairy.gif"
   },
   {
-    "name": "clefable",
+    "name": "Clefable",
     "attack": 73,
     "armor": 79,
     "hp": 90,
     "sprite": "clefable.gif"
   },
   {
-    "name": "vulpix",
+    "name": "Vulpix",
     "attack": 66,
     "armor": 68,
     "hp": 81,
     "sprite": "vulpix.gif"
   },
   {
-    "name": "ninetales",
+    "name": "Ninetales",
     "attack": 86,
     "armor": 60,
     "hp": 85,
     "sprite": "ninetales.gif"
   },
   {
-    "name": "jigglypuff",
+    "name": "Jigglypuff",
     "attack": 68,
     "armor": 67,
     "hp": 62,
     "sprite": "jigglypuff.gif"
   },
   {
-    "name": "wigglytuff",
+    "name": "Wigglytuff",
     "attack": 74,
     "armor": 66,
     "hp": 67,
     "sprite": "wigglytuff.gif"
   },
   {
-    "name": "zubat",
+    "name": "Zubat",
     "attack": 74,
     "armor": 77,
     "hp": 73,
     "sprite": "zubat.gif"
   },
   {
-    "name": "golbat",
+    "name": "Golbat",
     "attack": 85,
     "armor": 67,
     "hp": 83,
     "sprite": "golbat.gif"
   },
   {
-    "name": "oddish",
+    "name": "Oddish",
     "attack": 69,
     "armor": 60,
     "hp": 77,
     "sprite": "oddish.gif"
   },
   {
-    "name": "gloom",
+    "name": "Gloom",
     "attack": 87,
     "armor": 70,
     "hp": 74,
     "sprite": "gloom.gif"
   },
   {
-    "name": "vileplume",
+    "name": "Vileplume",
     "attack": 72,
     "armor": 87,
     "hp": 81,
     "sprite": "vileplume.gif"
   },
   {
-    "name": "paras",
+    "name": "Paras",
     "attack": 78,
     "armor": 84,
     "hp": 82,
     "sprite": "paras.gif"
   },
   {
-    "name": "parasect",
+    "name": "Parasect",
     "attack": 90,
     "armor": 84,
     "hp": 61,
     "sprite": "parasect.gif"
   },
   {
-    "name": "venonat",
+    "name": "Venonat",
     "attack": 66,
     "armor": 77,
     "hp": 90,
     "sprite": "venonat.gif"
   },
   {
-    "name": "venomoth",
+    "name": "Venomoth",
     "attack": 76,
     "armor": 82,
     "hp": 86,
     "sprite": "venomoth.gif"
   },
   {
-    "name": "diglett",
+    "name": "Diglett",
     "attack": 79,
     "armor": 90,
     "hp": 69,
     "sprite": "diglett.gif"
   },
   {
-    "name": "dugtrio",
+    "name": "Dugtrio",
     "attack": 88,
     "armor": 89,
     "hp": 61,
     "sprite": "dugtrio.gif"
   },
   {
-    "name": "meowth",
+    "name": "Meowth",
     "attack": 63,
     "armor": 69,
     "hp": 85,
     "sprite": "meowth.gif"
   },
   {
-    "name": "persian",
+    "name": "Persian",
     "attack": 89,
     "armor": 62,
     "hp": 76,
     "sprite": "persian.gif"
   },
   {
-    "name": "psyduck",
+    "name": "Psyduck",
     "attack": 64,
     "armor": 66,
     "hp": 67,
     "sprite": "psyduck.gif"
   },
   {
-    "name": "golduck",
+    "name": "Golduck",
     "attack": 82,
     "armor": 87,
     "hp": 60,
     "sprite": "golduck.gif"
   },
   {
-    "name": "mankey",
+    "name": "Mankey",
     "attack": 66,
     "armor": 75,
     "hp": 68,
     "sprite": "mankey.gif"
   },
   {
-    "name": "primeape",
+    "name": "Primeape",
     "attack": 72,
     "armor": 85,
     "hp": 70,
     "sprite": "primeape.gif"
   },
   {
-    "name": "growlithe",
+    "name": "Growlithe",
     "attack": 74,
     "armor": 75,
     "hp": 81,
     "sprite": "growlithe.gif"
   },
   {
-    "name": "arcanine",
+    "name": "Arcanine",
     "attack": 70,
     "armor": 84,
     "hp": 75,
     "sprite": "arcanine.gif"
   },
   {
-    "name": "poliwag",
+    "name": "Poliwag",
     "attack": 88,
     "armor": 79,
     "hp": 66,
     "sprite": "poliwag.gif"
   },
   {
-    "name": "poliwhirl",
+    "name": "Poliwhirl",
     "attack": 63,
     "armor": 87,
     "hp": 88,
     "sprite": "poliwhirl.gif"
   },
   {
-    "name": "poliwrath",
+    "name": "Poliwrath",
     "attack": 72,
     "armor": 76,
     "hp": 69,
     "sprite": "poliwrath.gif"
   },
   {
-    "name": "abra",
+    "name": "Abra",
     "attack": 66,
     "armor": 61,
     "hp": 82,
     "sprite": "abra.gif"
   },
   {
-    "name": "kadabra",
+    "name": "Kadabra",
     "attack": 86,
     "armor": 60,
     "hp": 85,
     "sprite": "kadabra.gif"
   },
   {
-    "name": "alakazam",
+    "name": "Alakazam",
     "attack": 78,
     "armor": 75,
     "hp": 62,
     "sprite": "alakazam.gif"
   },
   {
-    "name": "machop",
+    "name": "Machop",
     "attack": 81,
     "armor": 89,
     "hp": 77,
     "sprite": "machop.gif"
   },
   {
-    "name": "machoke",
+    "name": "Machoke",
     "attack": 87,
     "armor": 71,
     "hp": 84,
     "sprite": "machoke.gif"
   },
   {
-    "name": "machamp",
+    "name": "Machamp",
     "attack": 61,
     "armor": 64,
     "hp": 83,
     "sprite": "machamp.gif"
   },
   {
-    "name": "bellsprout",
+    "name": "Bellsprout",
     "attack": 69,
     "armor": 64,
     "hp": 72,
     "sprite": "bellsprout.gif"
   },
   {
-    "name": "weepinbell",
+    "name": "Weepinbell",
     "attack": 72,
     "armor": 86,
     "hp": 87,
     "sprite": "weepinbell.gif"
   },
   {
-    "name": "victreebel",
+    "name": "Victreebel",
     "attack": 89,
     "armor": 82,
     "hp": 85,
     "sprite": "victreebel.gif"
   },
   {
-    "name": "tentacool",
+    "name": "Tentacool",
     "attack": 84,
     "armor": 68,
     "hp": 66,
     "sprite": "tentacool.gif"
   },
   {
-    "name": "tentacruel",
+    "name": "Tentacruel",
     "attack": 80,
     "armor": 68,
     "hp": 84,
     "sprite": "tentacruel.gif"
   },
   {
-    "name": "geodude",
+    "name": "Geodude",
     "attack": 65,
     "armor": 62,
     "hp": 63,
     "sprite": "geodude.gif"
   },
   {
-    "name": "graveler",
+    "name": "Graveler",
     "attack": 87,
     "armor": 78,
     "hp": 72,
     "sprite": "graveler.gif"
   },
   {
-    "name": "golem",
+    "name": "Golem",
     "attack": 87,
     "armor": 75,
     "hp": 79,
     "sprite": "golem.gif"
   },
   {
-    "name": "ponyta",
+    "name": "Ponyta",
     "attack": 71,
     "armor": 75,
     "hp": 60,
     "sprite": "ponyta.gif"
   },
   {
-    "name": "rapidash",
+    "name": "Rapidash",
     "attack": 71,
     "armor": 62,
     "hp": 67,
     "sprite": "rapidash.gif"
   },
   {
-    "name": "slowpoke",
+    "name": "Slowpoke",
     "attack": 79,
     "armor": 79,
     "hp": 73,
     "sprite": "slowpoke.gif"
   },
   {
-    "name": "slowbro",
+    "name": "Slowbro",
     "attack": 89,
     "armor": 83,
     "hp": 75,
     "sprite": "slowbro.gif"
   },
   {
-    "name": "magnemite",
+    "name": "Magnemite",
     "attack": 89,
     "armor": 81,
     "hp": 73,
     "sprite": "magnemite.gif"
   },
   {
-    "name": "magneton",
+    "name": "Magneton",
     "attack": 70,
     "armor": 83,
     "hp": 71,
     "sprite": "magneton.gif"
   },
   {
-    "name": "farfetchd",
+    "name": "Farfetchd",
     "attack": 85,
     "armor": 60,
     "hp": 78,
     "sprite": "farfetchd.gif"
   },
   {
-    "name": "doduo",
+    "name": "Doduo",
     "attack": 82,
     "armor": 83,
     "hp": 82,
     "sprite": "doduo.gif"
   },
   {
-    "name": "dodrio",
+    "name": "Dodrio",
     "attack": 87,
     "armor": 79,
     "hp": 74,
     "sprite": "dodrio.gif"
   },
   {
-    "name": "seel",
+    "name": "Seel",
     "attack": 84,
     "armor": 70,
     "hp": 87,
     "sprite": "seel.gif"
   },
   {
-    "name": "dewgong",
+    "name": "Dewgong",
     "attack": 66,
     "armor": 76,
     "hp": 61,
     "sprite": "dewgong.gif"
   },
   {
-    "name": "grimer",
+    "name": "Grimer",
     "attack": 89,
     "armor": 67,
     "hp": 61,
     "sprite": "grimer.gif"
   },
   {
-    "name": "muk",
+    "name": "Muk",
     "attack": 60,
     "armor": 63,
     "hp": 82,
     "sprite": "muk.gif"
   },
   {
-    "name": "shellder",
+    "name": "Shellder",
     "attack": 60,
     "armor": 65,
     "hp": 90,
     "sprite": "shellder.gif"
   },
   {
-    "name": "cloyster",
+    "name": "Cloyster",
     "attack": 84,
     "armor": 67,
     "hp": 81,
     "sprite": "cloyster.gif"
   },
   {
-    "name": "gastly",
+    "name": "Gastly",
     "attack": 86,
     "armor": 79,
     "hp": 78,
     "sprite": "gastly.gif"
   },
   {
-    "name": "haunter",
+    "name": "Haunter",
     "attack": 89,
     "armor": 89,
     "hp": 84,
     "sprite": "haunter.gif"
   },
   {
-    "name": "gengar",
+    "name": "Gengar",
     "attack": 84,
     "armor": 62,
     "hp": 85,
     "sprite": "gengar.gif"
   },
   {
-    "name": "onix",
+    "name": "Onix",
     "attack": 79,
     "armor": 75,
     "hp": 90,
     "sprite": "onix.gif"
   },
   {
-    "name": "drowzee",
+    "name": "Drowzee",
     "attack": 72,
     "armor": 89,
     "hp": 89,
     "sprite": "drowzee.gif"
   },
   {
-    "name": "hypno",
+    "name": "Hypno",
     "attack": 68,
     "armor": 84,
     "hp": 88,
     "sprite": "hypno.gif"
   },
   {
-    "name": "krabby",
+    "name": "Krabby",
     "attack": 62,
     "armor": 62,
     "hp": 81,
     "sprite": "krabby.gif"
   },
   {
-    "name": "kingler",
+    "name": "Kingler",
     "attack": 66,
     "armor": 84,
     "hp": 85,
     "sprite": "kingler.gif"
   },
   {
-    "name": "voltorb",
+    "name": "Voltorb",
     "attack": 65,
     "armor": 88,
     "hp": 85,
     "sprite": "voltorb.gif"
   },
   {
-    "name": "electrode",
+    "name": "Electrode",
     "attack": 67,
     "armor": 77,
     "hp": 81,
     "sprite": "electrode.gif"
   },
   {
-    "name": "exeggcute",
+    "name": "Exeggcute",
     "attack": 86,
     "armor": 73,
     "hp": 76,
     "sprite": "exeggcute.gif"
   },
   {
-    "name": "exeggutor",
+    "name": "Exeggutor",
     "attack": 68,
     "armor": 77,
     "hp": 79,
     "sprite": "exeggutor.gif"
   },
   {
-    "name": "cubone",
+    "name": "Cubone",
     "attack": 89,
     "armor": 61,
     "hp": 69,
     "sprite": "cubone.gif"
   },
+
   {
-    "name": "marowak",
+    "name": "Marowak",
     "attack": 64,
     "armor": 81,
     "hp": 65,
     "sprite": "marowak.gif"
   },
   {
-    "name": "hitmonlee",
+    "name": "Hitmonlee",
     "attack": 60,
     "armor": 62,
     "hp": 74,
     "sprite": "hitmonlee.gif"
   },
   {
-    "name": "hitmonchan",
+    "name": "Hitmonchan",
     "attack": 78,
     "armor": 75,
     "hp": 81,
     "sprite": "hitmonchan.gif"
   },
   {
-    "name": "lickitung",
+    "name": "Lickitung",
     "attack": 69,
     "armor": 88,
     "hp": 70,
     "sprite": "lickitung.gif"
   },
   {
-    "name": "koffing",
+    "name": "Koffing",
     "attack": 71,
     "armor": 68,
     "hp": 87,
     "sprite": "koffing.gif"
   },
   {
-    "name": "weezing",
+    "name": "Weezing",
     "attack": 83,
     "armor": 63,
     "hp": 64,
     "sprite": "weezing.gif"
   },
   {
-    "name": "rhyhorn",
+    "name": "Rhyhorn",
     "attack": 74,
     "armor": 60,
     "hp": 60,
     "sprite": "rhyhorn.gif"
   },
   {
-    "name": "rhydon",
+    "name": "Rhydon",
     "attack": 86,
     "armor": 63,
     "hp": 67,
     "sprite": "rhydon.gif"
   },
   {
-    "name": "chansey",
+    "name": "Chansey",
     "attack": 81,
     "armor": 60,
     "hp": 80,
     "sprite": "chansey.gif"
   },
   {
-    "name": "tangela",
+    "name": "Tangela",
     "attack": 83,
     "armor": 73,
     "hp": 87,
     "sprite": "tangela.gif"
   },
   {
-    "name": "kangaskhan",
+    "name": "Kangaskhan",
     "attack": 68,
     "armor": 80,
     "hp": 71,
     "sprite": "kangaskhan.gif"
   },
   {
-    "name": "horsea",
+    "name": "Horsea",
     "attack": 79,
     "armor": 75,
     "hp": 71,
     "sprite": "horsea.gif"
   },
   {
-    "name": "seadra",
+    "name": "Seadra",
     "attack": 76,
     "armor": 79,
     "hp": 64,
     "sprite": "seadra.gif"
   },
   {
-    "name": "goldeen",
+    "name": "Goldeen",
     "attack": 89,
     "armor": 83,
     "hp": 66,
     "sprite": "goldeen.gif"
   },
   {
-    "name": "seaking",
+    "name": "Seaking",
     "attack": 76,
     "armor": 67,
     "hp": 63,
     "sprite": "seaking.gif"
   },
   {
-    "name": "staryu",
+    "name": "Staryu",
     "attack": 85,
     "armor": 66,
     "hp": 65,
     "sprite": "staryu.gif"
   },
   {
-    "name": "starmie",
+    "name": "Starmie",
     "attack": 79,
     "armor": 62,
     "hp": 72,
     "sprite": "starmie.gif"
   },
   {
-    "name": "mr.mime",
+    "name": "Mr.mime",
     "attack": 71,
     "armor": 76,
     "hp": 79,
-    "sprite": "mr.mime.gif"
+    "sprite": "mrmime.gif"
   },
   {
-    "name": "scyther",
+    "name": "Scyther",
     "attack": 89,
     "armor": 60,
     "hp": 89,
     "sprite": "scyther.gif"
   },
   {
-    "name": "jynx",
+    "name": "Jynx",
     "attack": 66,
     "armor": 75,
     "hp": 74,
     "sprite": "jynx.gif"
   },
   {
-    "name": "electabuzz",
+    "name": "Electabuzz",
     "attack": 61,
     "armor": 71,
     "hp": 62,
     "sprite": "electabuzz.gif"
   },
   {
-    "name": "magmar",
+    "name": "Magmar",
     "attack": 62,
     "armor": 86,
     "hp": 82,
     "sprite": "magmar.gif"
   },
   {
-    "name": "pinsir",
+    "name": "Pinsir",
     "attack": 76,
     "armor": 78,
     "hp": 67,
     "sprite": "pinsir.gif"
   },
   {
-    "name": "tauros",
+    "name": "Tauros",
     "attack": 64,
     "armor": 81,
     "hp": 79,
     "sprite": "tauros.gif"
   },
   {
-    "name": "magikarp",
+    "name": "Magikarp",
     "attack": 76,
     "armor": 82,
     "hp": 75,
     "sprite": "magikarp.gif"
   },
   {
-    "name": "gyarados",
+    "name": "Gyarados",
     "attack": 83,
     "armor": 81,
     "hp": 72,
     "sprite": "gyarados.gif"
   },
   {
-    "name": "lapras",
+    "name": "Lapras",
     "attack": 76,
     "armor": 73,
     "hp": 77,
     "sprite": "lapras.gif"
   },
   {
-    "name": "ditto",
+    "name": "Ditto",
     "attack": 86,
     "armor": 89,
     "hp": 87,
     "sprite": "ditto.gif"
   },
   {
-    "name": "eevee",
+    "name": "Eevee",
     "attack": 76,
     "armor": 65,
     "hp": 69,
     "sprite": "eevee.gif"
   },
   {
-    "name": "vaporeon",
+    "name": "Vaporeon",
     "attack": 61,
     "armor": 65,
     "hp": 89,
     "sprite": "vaporeon.gif"
   },
   {
-    "name": "jolteon",
+    "name": "Jolteon",
     "attack": 61,
     "armor": 72,
     "hp": 78,
     "sprite": "jolteon.gif"
   },
   {
-    "name": "flareon",
+    "name": "Flareon",
     "attack": 87,
     "armor": 78,
     "hp": 76,
     "sprite": "flareon.gif"
   },
   {
-    "name": "porygon",
+    "name": "Porygon",
     "attack": 81,
     "armor": 81,
     "hp": 83,
     "sprite": "porygon.gif"
   },
   {
-    "name": "omanyte",
+    "name": "Omanyte",
     "attack": 82,
     "armor": 67,
     "hp": 90,
     "sprite": "omanyte.gif"
   },
   {
-    "name": "omastar",
+    "name": "Omastar",
     "attack": 64,
     "armor": 86,
     "hp": 78,
     "sprite": "omastar.gif"
   },
   {
-    "name": "kabuto",
+    "name": "Kabuto",
     "attack": 60,
     "armor": 86,
     "hp": 87,
     "sprite": "kabuto.gif"
   },
   {
-    "name": "kabutops",
+    "name": "Kabutops",
     "attack": 60,
     "armor": 61,
     "hp": 85,
     "sprite": "kabutops.gif"
   },
   {
-    "name": "aerodactyl",
+    "name": "Aerodactyl",
     "attack": 78,
     "armor": 80,
     "hp": 82,
     "sprite": "aerodactyl.gif"
   },
   {
-    "name": "snorlax",
+    "name": "Snorlax",
     "attack": 89,
     "armor": 89,
     "hp": 85,
     "sprite": "snorlax.gif"
   },
   {
-    "name": "articuno",
+    "name": "Articuno",
     "attack": 61,
     "armor": 60,
     "hp": 64,
     "sprite": "articuno.gif"
   },
   {
-    "name": "zapdos",
+    "name": "Zapdos",
     "attack": 80,
     "armor": 87,
     "hp": 85,
     "sprite": "zapdos.gif"
   },
   {
-    "name": "moltres",
+    "name": "Moltres",
     "attack": 71,
     "armor": 74,
     "hp": 80,
     "sprite": "moltres.gif"
   },
   {
-    "name": "dratini",
+    "name": "Dratini",
     "attack": 85,
     "armor": 60,
     "hp": 89,
     "sprite": "dratini.gif"
   },
   {
-    "name": "dragonair",
+    "name": "Dragonair",
     "attack": 65,
     "armor": 64,
     "hp": 82,
     "sprite": "dragonair.gif"
   },
   {
-    "name": "dragonite",
+    "name": "Dragonite",
     "attack": 82,
     "armor": 87,
     "hp": 90,
     "sprite": "dragonite.gif"
   },
   {
-    "name": "mewtwo",
+    "name": "Mewtwo",
     "attack": 63,
     "armor": 88,
     "hp": 68,
     "sprite": "mewtwo.gif"
   },
   {
-    "name": "mew",
+    "name": "Mew",
     "attack": 82,
     "armor": 75,
     "hp": 71,

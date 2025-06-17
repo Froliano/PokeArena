@@ -8,27 +8,31 @@
 </head>
 <body>
     <div class="arena">
+        <div class="upgrade-screen">
+            <span>Choose an upgrade !</span>
+        </div>
         <div id="top-ui-bar" class="ui-bar">
             <div id="top-bar-decoration"></div>
             <div id="top-bar-right-decoration"></div>
         </div>
         <div id="bottom-ui-bar" class="ui-bar">
             <div id="action-buttons-container">
-                <button id="attack-button">Attack</button>
-                <button id="run-button">Run</button>
+                <button id="attack-button"><img src="/assets/img/attack.png">Attack</button>
+                <button id="run-button"><img src="/assets/img/run.png">Run</button>
             </div>
         </div>
         <div id="player">
             <img id="player-pokemon" class="pokemon" src="https://play.pokemonshowdown.com/sprites/gen5ani-back/pikachu-alola.gif">
             <div class="pokemon-standing-ground"></div>
         </div>
+        <img id="opponent-trainer" class="trainer" src="https://play.pokemonshowdown.com/sprites/trainers/acetrainer-gen7.png">
         <div id="opponent">
             <img id="opponent-pokemon" class="pokemon" src="">
             <div class="pokemon-standing-ground"></div>
         </div>
         <div id="player-status" class="status">
             <div class="status-container">
-                <p class="pokemon-name" id="pokemon-player">You</p>
+                <p class="pokemon-name" id="pokemon-player">Null</p>
                 <div class="hp-container">
                     <span>HP</span>
                     <div class="hp-bar">
@@ -40,10 +44,27 @@
                 </div>
                 <span id="player-hp-text" class="hp-text"></span>
             </div>
+            <div id="player-stats">
+                <div id="atk-stat" class="stat-container">
+                    <span class="stat-name">ATK</span>
+                    <span class="stat-value">0</span>
+                </div>
+                <div id="def-stat" class="stat-container">
+                    <span class="stat-name">DEF</span>
+                    <span class="stat-value">0</span>
+                </div>
+                <div id="hp-stat" class="stat-container">
+                    <span class="stat-name">HP</span>
+                    <span class="stat-value">0</span>
+                </div>
+                <div id="heal-stat" class="stat-container">
+                    <img class="stat-icon" src="https://play.pokemonshowdown.com/sprites/itemicons/hyper-potion.png">
+                </div>
+            </div>
         </div>
         <div id="opponent-status" class="status">
             <div class="status-container">
-                <p class="pokemon-name" id="pokemon-opponent">Opponent</p>
+                <p class="pokemon-name" id="pokemon-opponent">Null</p>
                 <div class="hp-container">
                     <span>HP</span>
                     <div class="hp-bar">
@@ -51,6 +72,14 @@
                     </div>
                 </div>
                 <span id="opponent-hp-text" class="hp-text"></span>
+            </div>
+            <div id="opponent-amount">
+                <img class="amount-pokeball" src="/assets/img/pokeball.png">
+                <img class="amount-pokeball" src="/assets/img/pokeball.png">
+                <img class="amount-pokeball" src="/assets/img/pokeball.png">
+                <img class="amount-pokeball" src="/assets/img/pokeball.png">
+                <img class="amount-pokeball" src="/assets/img/pokeball.png">
+                <img class="amount-pokeball none" src="/assets/img/pokeball.png">
             </div>
         </div>
         <div class="log" id="log"></div>

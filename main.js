@@ -1,9 +1,10 @@
 import Player from './Player.js';
-import Entity from './Entity.js';
 import { logMsg } from './utils.js';
 import {currentChapter, currentWave, currentChapterNumber, setCurrentChapterchapter} from './wave.js';
+import {saveGame, loadGame}from './Save.js';
 
 const player = new Player('Heros', 100, 50, 200);
+loadGame();
 
 let playerTurn = true;
 let win = false;
@@ -37,6 +38,7 @@ async function update() {
 function winTheChapter() {
     logMsg('Vous avez gagné le chapitre !');
     win = true;
+    saveGame();
 };
     
 
