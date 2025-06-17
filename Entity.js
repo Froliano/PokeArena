@@ -1,3 +1,5 @@
+import { logMsg } from './utils.js';
+
 class Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100) {
         this.name = name;
@@ -5,18 +7,24 @@ class Entity {
         this.maxHP = maxHP;
         this.attack = attack;
         this.armor = armor;
+        this.isAlive = true;
     }
 
-    takeDamage(amount) {
-        this.currentHP -= amount;
-        if (this.currentHP < 0) {
-            this.currentHP = 0;
-            this.die();
+    actionAttack(defender) {
+        let degats = this.attack * (100 / (100 + defender.armor)); //formule de dégâts lol
+        degats = Math.floor(degats); 
+        defender.currentHP -= degats;
+        if (defender.currentHP <= 0) {
+            defender.currentHP = 0;
+            defender.die();
         }
+        logMsg(`attaque qui inflige ${degats} dégâts.`);
     }
+
 
     die() {
         console.log(`${this.name} has died.`);
+        this.isAlive = false;
     }
 }
 

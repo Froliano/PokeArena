@@ -1,5 +1,6 @@
 import Player from './player.js';
 import Entity from './Entity.js';
+import { logMsg } from './utils.js';
 
 const player = new Player('Héros', 10, 20, 100);
 
@@ -10,8 +11,6 @@ let ennemiesChapiter1 = [slime, gobelin];
 let playerTurn = true;
 let win = false;
 
-
-const log = document.getElementById('log');
 const playerHpBar = document.getElementById('player-hp');
 const playerXpBar = document.getElementById('player-xp');
 const opponentHpBar = document.getElementById('opponent-hp');
@@ -21,28 +20,7 @@ const attackButton = document.getElementById('attack-button');
 
 update();
 
-function attack(attacker, defender) {
-    let degats = attacker.attack * (100 / (100 + defender.armor)); //formule de dégâts lol
-    degats = Math.floor(degats); 
-    defender.takeDamage(degats);
-    if (defender.currentHP <= 0) {
-        if (ennemiesChapiter1.length === 1) {
-            winTheChapter();
-            return;
-        }
-        ennemiesChapiter1.shift();
 
-        playerTurn = false;
-    }
-    playerTurn = !playerTurn;
-    logMsg(`attaque qui inflige ${degats} dégâts.`);
-}
-
-
-function logMsg(message) {
-    log.innerHTML += message + '<br>';
-    log.scrollTop = log.scrollHeight;
-}
 
 function update() {
     playerHpBar.style.width = (player.currentHP / player.maxHP * 100) + '%';
@@ -60,12 +38,24 @@ function winTheChapter() {
     
 
 function ennemisTurn() {
-        attack(ennemiesChapiter1[0], player);
-        update();
+    ennemiesChapiter1[0].actionAttack(player);
+    playerTurn = true;
+    update();
 }
 
 attackButton.addEventListener('click', () => {
-    attack(player, ennemiesChapiter1[0]);
+    player.actionAttack(ennemiesChapiter1[0]);
+    playerTurn = false;
+    if (!ennemiesChapiter1[0].isAlive) {
+        if (ennemiesChapiter1.length === 1) {
+            winTheChapter();
+        }
+        else {
+            ennemiesChapiter1.shift();
+        }
+        playerTurn = true;
+        logMsg(`${ennemiesChapiter1[0].name} a été vaincu !`);
+    }
     update();
     if(!win && !playerTurn) {
         setTimeout(ennemisTurn, 1000); 
