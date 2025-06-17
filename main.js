@@ -1,4 +1,4 @@
-import Player from './player.js';
+import Player from './Player.js';
 import Entity from './Entity.js';
 import { logMsg } from './utils.js';
 
