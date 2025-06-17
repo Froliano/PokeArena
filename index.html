@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PokeArena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="arena">
+        <div class="status">
+            <div class="player">
+                <strong>You</strong>
+                <div class="hp-bar"><div class="hp" id="player-hp"></div></div>
+                <div class="xp-bar"><div class="xp" id="player-xp"></div></div>
+                <span id="player-hp-text"></span>
+            </div>
+            <div class="opponent">
+                <strong>Opponent</strong>
+                <div class="hp-bar"><div class="hp" id="opponent-hp"></div></div>
+                <span id="opponent-hp-text"></span>
+            </div>
+        </div>
+        <div class="log" id="log"></div>
+        <div class="actions">
+            <button id="attack-button">Attack</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="main.js" type="module"></script>

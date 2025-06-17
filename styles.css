@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #3a3a3a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.arena {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.player,
+.opponent {
+    width: 100%;
+}
+
+.hp-bar,
+.xp-bar {
+    background: #222;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.hp {
+    background: #4caf50;
+    height: 16px;
+    transition: width 0.3s;
+}
+
+.xp {
+    background: #2196f3;
+    height: 8px;
+    transition: width 0.3s;
+}
+
+.log {
+    background: #111;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    height: 80px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background: #2196f3;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #444;
+    cursor: not-allowed;
+}
