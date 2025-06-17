@@ -8,23 +8,52 @@
 </head>
 <body>
     <div class="arena">
-        <div class="status">
-            <div class="player">
-                <strong>You</strong>
-                <div class="hp-bar"><div class="hp" id="player-hp"></div></div>
-                <div class="xp-bar"><div class="xp" id="player-xp"></div></div>
-                <span id="player-hp-text"></span>
+        <div id="top-ui-bar" class="ui-bar">
+            <div id="top-bar-decoration"></div>
+            <div id="top-bar-right-decoration"></div>
+        </div>
+        <div id="bottom-ui-bar" class="ui-bar">
+            <div id="action-buttons-container">
+                <button id="attack-button">Attack</button>
+                <button id="run-button">Run</button>
             </div>
-            <div class="opponent">
-                <strong>Opponent</strong>
-                <div class="hp-bar"><div class="hp" id="opponent-hp"></div></div>
-                <span id="opponent-hp-text"></span>
+        </div>
+        <div id="player">
+            <img id="player-pokemon" class="pokemon" src="https://play.pokemonshowdown.com/sprites/gen5ani-back/pikachu-alola.gif">
+            <div class="pokemon-standing-ground"></div>
+        </div>
+        <div id="opponent">
+            <img id="opponent-pokemon" class="pokemon" src="https://play.pokemonshowdown.com/sprites/gen5ani/charmander.gif">
+            <div class="pokemon-standing-ground"></div>
+        </div>
+        <div id="player-status" class="status">
+            <div class="status-container">
+                <p class="pokemon-name">You</p>
+                <div class="hp-container">
+                    <span>HP</span>
+                    <div class="hp-bar">
+                        <div class="hp" id="player-hp"></div>
+                    </div>
+                </div>
+                <div class="xp-bar">
+                    <div class="xp" id="player-xp"></div>
+                </div>
+                <span id="player-hp-text" class="hp-text"></span>
+            </div>
+        </div>
+        <div id="opponent-status" class="status">
+            <div class="status-container">
+                <p class="pokemon-name">Opponent</p>
+                <div class="hp-container">
+                    <span>HP</span>
+                    <div class="hp-bar">
+                        <div class="hp" id="opponent-hp"></div>
+                    </div>
+                </div>
+                <span id="opponent-hp-text" class="hp-text"></span>
             </div>
         </div>
         <div class="log" id="log"></div>
-        <div class="actions">
-            <button id="attack-button">Attack</button>
-        </div>
     </div>
 </body>
 </html>
