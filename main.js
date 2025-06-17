@@ -1,63 +1,43 @@
-let joueur = {
-    maxHP: 100,
-    currentHP: 100,     
-    armure: 50,
-    attaque: 15,
-    xp: 0,
-    niveau: 1,
-};
+import Player from './player.js';
+import Entity from './Entity.js';
 
-let slime = {
-    maxHP: 30,
-    currentHP: 30,
-    armure: 10,
-    attaque: 10
-};
+const player = new Player('Héros', 10, 20, 100);
 
-let gobelin = {
-    maxHP: 50,
-    currentHP: 50,
-    armure: 20,
-    attaque: 5
-};
+const slime = new Entity('Slime', 10, 5, 20);
+const gobelin = new Entity('Gobelin', 15, 10, 30);
 
-let ennemis = [slime, gobelin, gobelin, slime, gobelin];
-let currentEnnemi = 0;
+let ennemiesChapiter1 = [slime, gobelin];
 let playerTurn = true;
+let win = false;
+
 
 const log = document.getElementById('log');
 const playerHpBar = document.getElementById('player-hp');
+const playerXpBar = document.getElementById('player-xp');
 const opponentHpBar = document.getElementById('opponent-hp');
 const playerHpText = document.getElementById('player-hp-text');
 const opponentHpText = document.getElementById('opponent-hp-text');
 const attackButton = document.getElementById('attack-button');
 
-function attaquer(attaquant, defenseur) {
-    let degats = attaquant.attaque * (100 / (100 + defenseur.armure)); //formule de dégâts lol
-    defenseur.currentHP -= degats;
-    if (defenseur.currentHP < 0) {
-        defenseur.currentHP = 0;
-        die(defenseur);
-        xpGain(attaquant);
+update();
+
+function attack(attacker, defender) {
+    let degats = attacker.attack * (100 / (100 + defender.armor)); //formule de dégâts lol
+    degats = Math.floor(degats); 
+    defender.takeDamage(degats);
+    if (defender.currentHP <= 0) {
+        if (ennemiesChapiter1.length === 1) {
+            winTheChapter();
+            return;
+        }
+        ennemiesChapiter1.shift();
+
+        playerTurn = false;
     }
-    logMsg(`${attaquant} attaque ${defenseur} et inflige ${degats} dégâts.`);
+    playerTurn = !playerTurn;
+    logMsg(`attaque qui inflige ${degats} dégâts.`);
 }
 
-function xpGain(joueur) {
-    joueur.xp += 10;
-    logMsg(`Vous avez gagné 10 XP. Total XP: ${joueur.xp}`);
-    if (joueur.xp >= 100) {
-        joueur.niveau++;
-        joueur.xp = 0;
-    }
-}
-
-function die(monstre) {
-    if (currentEnnemi < ennemis.length - 1) {
-        currentEnnemi++;
-        logMsg(`Le monstre ${monstre} est mort. Vous passez au monstre suivant.`);
-    }
-}
 
 function logMsg(message) {
     log.innerHTML += message + '<br>';
@@ -66,21 +46,28 @@ function logMsg(message) {
 
 function update() {
     playerHpBar.style.width = (player.currentHP / player.maxHP * 100) + '%';
-    opponentHpBar.style.width = (ennemis[currentEnnemi].currentHP / ennemis[currentEnnemi].maxHP * 100) + '%';
-    playerHpText.textContent = `${player.currentHP} / ${player.maxHp} HP`;
-    opponentHpText.textContent = `${ennemis[currentEnnemi].currentHP} / ${ennemis[currentEnnemi].maxHp} HP`;
-    attackButton.disabled = !playerTurn || player.currentEnnemi == 0 
+    playerXpBar.style.width = (player.xp / 100 * 100) + '%';
+    opponentHpBar.style.width = (ennemiesChapiter1[0].currentHP / ennemiesChapiter1[0].maxHP * 100) + '%';
+    playerHpText.textContent = `${player.currentHP} / ${player.maxHP} HP`;
+    opponentHpText.textContent = `${ennemiesChapiter1[0].currentHP} / ${ennemiesChapiter1[0].maxHP} HP`;
+    attackButton.disabled = !playerTurn || win;
 }
 
+function winTheChapter() {
+    console.log('Vous avez gagné le chapitre !');
+    win = true;
+};
+    
+
 function ennemisTurn() {
-    attaquer(ennemis[currentEnnemi], joueur);
-    playerTurn = true;
-    update();
+        attack(ennemiesChapiter1[0], player);
+        update();
 }
 
 attackButton.addEventListener('click', () => {
-    attaquer(joueur, ennemis[currentEnnemi]);
-    playerTurn = false;
+    attack(player, ennemiesChapiter1[0]);
     update();
-    setTimeout(ennemisTurn, 1000); // Attendre avant que l'ennemi attaque
+    if(!win && !playerTurn) {
+        setTimeout(ennemisTurn, 1000); 
+    };
 })
