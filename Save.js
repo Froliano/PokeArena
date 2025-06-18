@@ -19,7 +19,6 @@ function saveGame(player) {
 
 function loadGame() {
     let gameState = JSON.parse(localStorage.getItem('gameState'));
-    console.log('Game state:', gameState.player.name);
     if (gameState) {
         player.name = gameState.player.name;
         player.currentHP = gameState.player.currentHP;
