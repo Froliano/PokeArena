@@ -18,7 +18,6 @@ const pikachuSelect = document.getElementById('player-pikachu');
 addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
 
 update();
-showMenu();
 
 function winTheChapter() {
     setCurrentEnnemy(0);
