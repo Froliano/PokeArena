@@ -1,6 +1,11 @@
 import Entity from "./Entity.js";
+import Chapter from "./Chapter.js";
+import {chapter1} from "./initChapter.js";
 
-let currentChapterNumber = 1;
+let currentChapterNumber = 0;
+
+let allChapters = [chapter1];
+
 let currentChapter;
 let currentWave;
 
@@ -19,16 +24,8 @@ async function setCurrentChapter() {
     currentChapter.push(currentPokemon);
   }
   setCurrentWave();
-}
-
-function activePokeball(number) {
-  for (let i = 0; i < 6; i++) {
-    if (i < number) {
-      pokeball[i].classList.remove("none");
-    } else {
-      pokeball[i].classList.add("none");
-    }
-  }
+  let newChapter = new Chapter(currentChapterNumber, currentChapter, currentWave);
+  allChapters.push(newChapter);
 }
 
 async function setCurrentWave() {
@@ -45,6 +42,16 @@ async function setCurrentWave() {
   }
 }
 
+function activePokeball(number) {
+  for (let i = 0; i < 6; i++) {
+    if (i < number) {
+      pokeball[i].classList.remove("none");
+    } else {
+      pokeball[i].classList.add("none");
+    }
+  }
+}
+
 function setCurrentChapterNumber(number) {
   currentChapterNumber = number;
 }
@@ -56,4 +63,5 @@ export {
   setCurrentChapter,
   setCurrentChapterNumber,
   activePokeball,
+  allChapters
 };

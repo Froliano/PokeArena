@@ -1,4 +1,9 @@
-import { logMsg } from './Utils.js';
+const log = document.getElementById('log');
+
+function logMsg(message) {
+    log.innerHTML += message + '<br>';
+    log.scrollTop = log.scrollHeight;
+}
 
 class Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100) {

@@ -1,4 +1,4 @@
-import { currentChapter, currentWave, activePokeball} from './Wave.js';
+import {currentChapterNumber, activePokeball, allChapters} from './Wave.js';
 
 const log = document.getElementById('log');
 const upgradeMenuButton = document.getElementById('upgrade-screen');
@@ -49,19 +49,19 @@ function upgradeMenu(player)
 }
 
 function update(player) {
-    opponentName.textContent = currentWave[0].name;
-    activePokeball(currentWave.length);
+    opponentName.textContent = allChapters[currentChapterNumber].entityPokemon[0].name;
+    activePokeball(allChapters[currentChapterNumber].jsonPokemon.length);
     
     attackUpgradeButton.querySelector(".stat-value").textContent = player.attack;
     armorUpgradeButton.querySelector(".stat-value").textContent = player.armor;
     maxHpUpgradeButton.querySelector(".stat-value").textContent = player.maxHP;
     
-    opponentImage.src = `https://play.pokemonshowdown.com/sprites/gen5ani/${currentChapter[0].sprite}`;
+    opponentImage.src = `https://play.pokemonshowdown.com/sprites/gen5ani/${allChapters[currentChapterNumber].jsonPokemon[0].sprite}`;
     playerHpBar.style.width = (player.currentHP / player.maxHP * 100) + '%';
     playerXpBar.style.width = (player.xp / 100 * 100) + '%';
-    opponentHpBar.style.width = (currentWave[0].currentHP / currentWave[0].maxHP * 100) + '%';
+    opponentHpBar.style.width = (allChapters[currentChapterNumber].entityPokemon[0].currentHP / allChapters[currentChapterNumber].entityPokemon[0].maxHP * 100) + '%';
     playerHpText.textContent = `${player.currentHP} / ${player.maxHP} HP`;
-    opponentHpText.textContent = `${currentWave[0].currentHP} / ${currentWave[0].maxHP} HP`;
+    opponentHpText.textContent = `${allChapters[currentChapterNumber].entityPokemon[0].currentHP} / ${allChapters[currentChapterNumber].entityPokemon[0].maxHP} HP`;
 }
 
 export { 
