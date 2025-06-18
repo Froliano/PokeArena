@@ -1,5 +1,5 @@
 import Player from './scripts/Player.js';
-import { logMsg, update, attackButton, gameOver } from './scripts/Utils.js';
+import { logMsg, update, attackButton, gameOver, addapt } from './scripts/Utils.js';
 import {setCurrentChapter, allChapters, currentChapterNumber, setCurrentChapterNumber} from './scripts/Wave.js';
 import {saveGame, loadGame}from './scripts/Save.js';
 import * as music from './scripts/Music.js';
