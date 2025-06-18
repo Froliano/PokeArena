@@ -1,4 +1,4 @@
-import { logMsg } from './utils.js';
+import { logMsg } from './Utils.js';
 
 class Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100) {

@@ -1,6 +1,6 @@
 import Player from './Player.js';
-import { logMsg } from './utils.js';
-import {currentChapter, currentWave, currentChapterNumber, setCurrentChapterchapter} from './wave.js';
+import { logMsg } from './Utils.js';
+import {currentChapter, currentWave, setCurrentChapterchapter} from './Wave.js';
 import {saveGame, loadGame}from './Save.js';
 
 const player = new Player('Heros', 100, 50, 200);
@@ -38,7 +38,7 @@ async function update() {
 function winTheChapter() {
     logMsg('Vous avez gagné le chapitre !');
     win = true;
-    saveGame();
+    saveGame(player);
 };
     
 
@@ -64,6 +64,6 @@ attackButton.addEventListener('click', () => {
     }
     update();
     if(!win && !playerTurn) {
-        setTimeout(ennemisTurn, 1000); 
+        setTimeout(ennemisTurn, 100); 
     };
 })
