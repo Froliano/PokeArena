@@ -31,7 +31,7 @@ function loadGame(player) {
         player.armor = gameState.player.armor;
         player.xp = gameState.player.xp;
         player.level = gameState.player.level;
-        player.addMoney(gameState.player.money);
+        player.setMoney(gameState.player.money);
         player.currentMon = gameState.player.currentMon;
         setCurrentChapterNumber(gameState.currentChapterNumber);
         setMaxChapterNumber(gameState.maxChapterNumber);

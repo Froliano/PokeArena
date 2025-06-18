@@ -98,6 +98,12 @@ class Player extends Entity {
         document.querySelector('#money-amount .value').textContent = `${this.money}`;
         logMsg(`Vous avez gagne ${amount} pieces. Total: ${this.money} pieces.`);
     }
+
+    setMoney(amount) {
+        this.money = amount;
+        document.querySelector('#money-amount .value').textContent = `${this.money}`;
+        logMsg(`Votre solde est maintenant de ${this.money} pieces.`);
+    }
     removeMoney(amount) {
         this.money -= amount;
         document.querySelector('#money-amount .value').textContent = `${this.money}`;
