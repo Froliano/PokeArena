@@ -85,17 +85,21 @@ runButton.addEventListener('click', () => {
 eeveeSelect.addEventListener('click', () => {
     // Check if player has 1000 money
     if (eeveeSelect.classList.contains('locked')) {
-        if (player.money >= 1) {
+        if (player.money >= 1000) {
             player.currentMon = 'eevee.gif';
             player.name = 'Eevee';
             player.money -= 1000;
             player.refreshMon();
             eeveeSelect.classList.remove('locked')
+            eeveeSelect.classList.add('selected');
+            pikachuSelect.classList.remove('selected');
         }
     } else {
         player.currentMon = 'eevee.gif';
         player.name = 'Eevee';
         player.refreshMon();
+        eeveeSelect.classList.add('selected');
+        pikachuSelect.classList.remove('selected');
     }
 
 });
@@ -104,4 +108,6 @@ pikachuSelect.addEventListener('click', () => {
     player.currentMon = 'pikachu-alola.gif';
     player.name = 'Pikachu';
     player.refreshMon();
+    pikachuSelect.classList.add('selected');
+    eeveeSelect.classList.remove('selected');
 });

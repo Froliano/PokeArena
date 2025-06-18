@@ -624,6 +624,20 @@ body {
     outline: 5px solid #4b4242;
     transform: skewY(-15deg);
 }
+.player-pokemon-view.locked .value {
+    z-index: 4;
+    position: absolute;
+    top: -190px;
+    right: 10px;
+    height: 100%;
+    font-family: 'pokeFont', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff0505;  
+}
+.player-pokemon-view.selected {
+    box-shadow: 0 0 45px rgba(178, 242, 143, 1);
+}
 .player-pokemon-view .bottom-half {
     position: absolute;
     bottom: 0;
