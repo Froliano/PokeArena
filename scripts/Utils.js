@@ -51,6 +51,7 @@ function upgradeMenu(player)
 function update(player) {
     opponentName.textContent = allChapters[currentChapterNumber].entityPokemon[0].name;
     activePokeball(allChapters[currentChapterNumber].jsonPokemon.length);
+    allChapters[currentChapterNumber].updateChapterIcon();
     
     attackUpgradeButton.querySelector(".stat-value").textContent = player.attack;
     armorUpgradeButton.querySelector(".stat-value").textContent = player.armor;

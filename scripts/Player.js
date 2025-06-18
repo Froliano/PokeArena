@@ -5,7 +5,7 @@ class Player extends Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100, level = 1) {
         super(name, attack, armor, maxHP);
         this.level = level;
-        this.xp = 60;
+        this.xp = 0;
     }
 
     die() {
@@ -27,7 +27,7 @@ class Player extends Entity {
         if (defender.currentHP <= 0) {
             defender.currentHP = 0;
             defender.die();
-            this.winXP(50);
+            this.winXP(0);
         }
         logMsg(`attaque qui inflige ${degats} dégâts.`);
     }

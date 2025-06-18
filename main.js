@@ -1,10 +1,10 @@
 import Player from './scripts/Player.js';
 import { logMsg, update, attackButton } from './scripts/Utils.js';
-import {currentChapter, setCurrentChapter, allChapters, currentChapterNumber} from './scripts/Wave.js';
+import {setCurrentChapter, allChapters, currentChapterNumber, setCurrentChapterNumber} from './scripts/Wave.js';
 import {saveGame, loadGame}from './scripts/Save.js';
 import * as music from './scripts/Music.js';
 
-const player = new Player('Heros', 100, 50, 200);
+const player = new Player('Heros', 300, 50, 200);
 loadGame(player);
 
 music.playBattleMusic();
@@ -15,7 +15,7 @@ let win = false;
 const playerName = document.getElementById('pokemon-player');
 playerName.textContent = player.name;
 
-if(currentChapterNumber > allChapters.length) {
+if(currentChapterNumber + 1 > allChapters.length) {
     await setCurrentChapter();
 }
 update(player, playerTurn, win);
@@ -25,7 +25,7 @@ function winTheChapter() {
     win = true;
     saveGame(player);
     attackButton.disabled = true;
-
+    setCurrentChapterNumber(currentChapterNumber + 1);
 };
     
 
@@ -57,6 +57,6 @@ attackButton.addEventListener('click', () => {
     }
     update(player, playerTurn, win);
     if(!win && !playerTurn) {
-        setTimeout(ennemisTurn, 1000); 
+        setTimeout(ennemisTurn, 100); 
     };
 })

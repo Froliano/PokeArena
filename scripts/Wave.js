@@ -1,10 +1,10 @@
 import Entity from "./Entity.js";
 import Chapter from "./Chapter.js";
-import {chapter1} from "./initChapter.js";
+import {chapter1, chapter2, chapter3, chapter4, chapter5, chapter6} from "./initChapter.js";
 
 let currentChapterNumber = 0;
 
-let allChapters = [chapter1];
+let allChapters = [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6];
 
 let currentChapter;
 let currentWave;
@@ -12,7 +12,6 @@ let currentWave;
 const pokeball = document.querySelectorAll("#opponent-amount img");
 
 async function setCurrentChapter() {
-  /*create a random chapter with 4 to 6 pokemon with the json*/
   currentChapter = [];
   let randomNumber = Math.floor(Math.random() * 3) + 4;
 
@@ -24,12 +23,12 @@ async function setCurrentChapter() {
     currentChapter.push(currentPokemon);
   }
   setCurrentWave();
+  console.log(currentChapter);
   let newChapter = new Chapter(currentChapterNumber, currentChapter, currentWave);
   allChapters.push(newChapter);
 }
 
 async function setCurrentWave() {
-  /*create a wave with the current chapter pokemon and transform them in Entity*/
   currentWave = [];
   for (let pokemon of currentChapter) {
     let entity = new Entity(
