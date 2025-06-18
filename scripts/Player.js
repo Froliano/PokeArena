@@ -35,7 +35,30 @@ class Player extends Entity {
     levelUp() {
         this.level++;
         logMsg(`${this.name} a atteint le niveau ${this.level} !`);
-        upgradeMenu();
+        upgradeMenu(this);
+    }
+
+    heal() {
+        this.currentHP += this.maxHP * 0.5; // Soigne 20% des PV max
+        if (this.currentHP > this.maxHP) {
+            this.currentHP = this.maxHP;
+        }
+        logMsg(`${this.name} a été soigné.`);
+    }
+
+    upgradeAttack() {
+        this.attack += 5;
+        logMsg(`${this.name} a amélioré son attaque à ${this.attack}.`);
+    }
+
+    upgradeArmor() {
+        this.armor += 5;
+        logMsg(`${this.name} a amélioré son armure à ${this.armor}.`);
+    }
+
+    upgradeMaxHP() {
+        this.maxHP += 20;
+        logMsg(`${this.name} a augmenté ses PV maximum à ${this.maxHP}.`);
     }
 
 }

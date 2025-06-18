@@ -6,7 +6,7 @@ let currentWave;
 
 const pokeball = document.querySelectorAll("#opponent-amount img");
 
-async function setCurrentChapterchapter() {
+async function setCurrentChapter() {
   /*create a random chapter with 4 to 6 pokemon with the json*/
   currentChapter = [];
   let randomNumber = Math.floor(Math.random() * 3) + 4;
@@ -53,7 +53,7 @@ export {
   currentChapter,
   currentWave,
   currentChapterNumber,
-  setCurrentChapterchapter,
+  setCurrentChapter,
   setCurrentChapterNumber,
   activePokeball,
 };
