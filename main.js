@@ -17,7 +17,7 @@ addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
 
 update();
 
-    function winTheChapter() {
+function winTheChapter() {
     logMsg('Vous avez gagné le chapitre !');
     music.stopCurrentMusic();
     music.chapterWonSound();
@@ -25,13 +25,13 @@ update();
     gameOver('You completed the battle!')
     //win = true;
     setCurrentChapterNumber(currentChapterNumber + 1);
+    setMaxChapterNumber(currentChapterNumber + 1);
     if(currentChapterNumber + 1 > allChapters.length) {
         setCurrentChapter(currentChapterNumber);
     }
     update(player);
     saveGame(player);
     unlockNextChapter();
-;
 }
 
 function ennemisTurn() {

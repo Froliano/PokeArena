@@ -1,13 +1,19 @@
 import { addapt, hideMenu, update } from "./Utils.js";
 import { setCurrentChapterNumber, currentChapterNumber, allChapters } from "./Wave.js";
 
+const trainerNames = [
+    "aaron", "ash", "brock", "misty", "may", "dawn", "serena", "gloria",
+    "hop", "marnie", "bede", "hop", "penny", "nemona"
+];
+
+
 class Chapter
 {
-    constructor(id, jsonPokemon = [], entityPokemon = [], trainer="aaron") {
+    constructor(id, jsonPokemon = [], entityPokemon = [], trainer) {
         this.id = id;
         this.jsonPokemon = jsonPokemon;
         this.entityPokemon = entityPokemon;
-        this.trainer = trainer;
+        this.trainer = trainer ? trainer : trainerNames[Math.floor(Math.random() * trainerNames.length)];
         const chapterElement = document.getElementById(`chapter${this.id}`);
         if (chapterElement) {
             const chapterIcon = chapterElement.querySelector(".chapter-cover-trainer");
@@ -41,9 +47,7 @@ class Chapter
         }
 
         document.getElementById(`chapter${this.id}`).addEventListener("click", () => {
-            console.log(`Chapter ${this.id} selected`);
             setCurrentChapterNumber(this.id - 1);
-            console.log(`Current chapter number set to ${currentChapterNumber}`);
             update()
             addapt(allChapters[currentChapterNumber].entityPokemon[0]);
             hideMenu();
