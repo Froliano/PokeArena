@@ -696,7 +696,7 @@ body {
 
 #chapter-selection {
     position: absolute;
-    width: 435px;
+    width: 450px;
     height: calc(100% - 35px);
     padding: 20px;
     right: 0;
