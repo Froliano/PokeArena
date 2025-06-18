@@ -17,7 +17,7 @@ class Entity {
     }
 
     actionAttack(defender) {
-        let degats = this.attack * (100 / (100 + defender.armor)); //formule de dégâts lol
+        let degats = this.attack * (100 / (100 + defender.armor));
         degats = Math.floor(degats); 
         defender.currentHP -= degats;
         if (defender.currentHP <= 0) {

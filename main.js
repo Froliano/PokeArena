@@ -1,5 +1,5 @@
 import Player from './scripts/Player.js';
-import { logMsg, update, attackButton, gameOver } from './scripts/Utils.js';
+import { logMsg, update, attackButton, gameOver, addapt } from './scripts/Utils.js';
 import {setCurrentChapter, allChapters, currentChapterNumber, setCurrentChapterNumber} from './scripts/Wave.js';
 import {saveGame, loadGame}from './scripts/Save.js';
 import * as music from './scripts/Music.js';
@@ -14,6 +14,8 @@ let win = false;
 
 const playerName = document.getElementById('pokemon-player');
 playerName.textContent = player.name;
+
+addapt(allChapters[currentChapterNumber].entityPokemon[0]);
 
 update(player);
 
@@ -56,6 +58,7 @@ attackButton.addEventListener('click', () => {
         else {
             allChapters[currentChapterNumber].entityPokemon.shift();
             allChapters[currentChapterNumber].jsonPokemon.shift();
+            addapt(allChapters[currentChapterNumber].entityPokemon[0]);
         }
         playerTurn = true;
 

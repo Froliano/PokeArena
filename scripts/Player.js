@@ -1,6 +1,7 @@
 import Entity from './Entity.js';
 import { logMsg, showMenu, upgradeMenu, gameOver } from './Utils.js';
 import * as music from './Music.js';
+import { currentChapterNumber } from './Wave.js';
 
 class Player extends Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100, level = 1) {
@@ -31,7 +32,9 @@ class Player extends Entity {
         if (defender.currentHP <= 0) {
             defender.currentHP = 0;
             defender.die();
-            this.winXP(50);
+
+            const xpGain = 50 + (currentChapterNumber - 1) * 20;
+            this.winXP(xpGain);
         }
         music.attackSound();
         logMsg(`attaque qui inflige ${degats} dégâts.`);

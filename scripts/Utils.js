@@ -95,6 +95,14 @@ function gameOver(message) {
     }, 3000);
 }
 
+function addapt(entity)
+{
+    entity.maxHP = entity.maxHP + (currentChapterNumber * 10);
+    entity.currentHP = entity.maxHP;
+    entity.attack = entity.attack + (currentChapterNumber * 3);
+    entity.armor = entity.armor + (currentChapterNumber * 3);
+}
+
 window.showMenu = showMenu;
 window.hideMenu = hideMenu;
 export { 
@@ -105,4 +113,5 @@ export {
     showMenu,
     hideMenu,
     gameOver,
+    addapt,
 };
