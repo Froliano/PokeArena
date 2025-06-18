@@ -88,7 +88,7 @@ eeveeSelect.addEventListener('click', () => {
         if (player.money >= 1000) {
             player.currentMon = 'eevee.gif';
             player.name = 'Eevee';
-            player.money -= 1000;
+            player.removeMoney(1000);
             player.refreshMon();
             eeveeSelect.classList.remove('locked')
             eeveeSelect.classList.add('selected');

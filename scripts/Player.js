@@ -90,6 +90,11 @@ class Player extends Entity {
         document.querySelector('#money-amount .value').textContent = `${this.money}`;
         logMsg(`Vous avez gagne ${amount} pieces. Total: ${this.money} pieces.`);
     }
+    removeMoney(amount) {
+        this.money -= amount;
+        document.querySelector('#money-amount .value').textContent = `${this.money}`;
+        logMsg(`Vous avez depense ${amount} pieces. Total: ${this.money} pieces.`);
+    }
 
     refreshMon() {
         pokemon.src = `https://play.pokemonshowdown.com/sprites/gen5ani-back/${this.currentMon}`;
