@@ -2,9 +2,12 @@ import Player from './scripts/Player.js';
 import { logMsg, update, attackButton } from './scripts/Utils.js';
 import {currentChapter, setCurrentChapter, allChapters, currentChapterNumber} from './scripts/Wave.js';
 import {saveGame, loadGame}from './scripts/Save.js';
+import * as music from './scripts/Music.js';
 
 const player = new Player('Heros', 100, 50, 200);
 loadGame(player);
+
+music.playBattleMusic();
 
 let playerTurn = true;
 let win = false;
