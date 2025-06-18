@@ -67,4 +67,16 @@ function chapterWonSound() {
     chapterWonAudio.play();
 }
 
-export { playBattleMusic, playMenuMusic, stopCurrentMusic, attackSound, levelUpSound, healSound, chapterWonSound };
+function pokeballOutSound() {
+    const pokeballOutAudio = new Audio('/assets/music/pokeBallOut.wav');
+    pokeballOutAudio.volume = 1;
+    pokeballOutAudio.play();
+}
+
+function runSound() {
+    const runAudio = new Audio('/assets/music/run.wav');
+    runAudio.volume = 1;
+    runAudio.play();
+}
+
+export { playBattleMusic, playMenuMusic, stopCurrentMusic, attackSound, levelUpSound, healSound, chapterWonSound, pokeballOutSound, runSound };

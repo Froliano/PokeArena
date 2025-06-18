@@ -3,16 +3,24 @@ import { logMsg, showMenu, upgradeMenu, gameOver } from './Utils.js';
 import * as music from './Music.js';
 import { currentChapterNumber } from './Wave.js';
 
+const pokemon = document.getElementById('player-pokemon');
+
 class Player extends Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100, level = 1) {
         super(name, attack, armor, maxHP);
         this.level = level;
         this.xp = 0;
         this.xpToNextLevel = 100;
+        this.money = 0;
     }
 
     die() {
         console.log(`${this.name} has died.`);
+        pokemon.style.animation = 'pokemonKO 0.5s';
+        pokemon.addEventListener('animationend', () => {
+            pokemon.style.opacity = '0';
+        }, { once: true });
+        music.stopCurrentMusic();
         gameOver(`${this.name} blacked out!`);
     }
 
@@ -36,8 +44,12 @@ class Player extends Entity {
             const xpGain = 50 + (currentChapterNumber - 1) * 20;
             this.winXP(xpGain);
         }
+        pokemon.style.animation = 'pokemonAttack 0.3s ease-in-out';
+        pokemon.addEventListener('animationend', () => {
+            pokemon.style.animation = '';
+        }, { once: true });
         music.attackSound();
-        logMsg(`attaque qui inflige ${degats} dégâts.`);
+        logMsg(`Votre attaque inflige ${degats} degets.`);
     }
 
     levelUp() {
@@ -53,22 +65,27 @@ class Player extends Entity {
             this.currentHP = this.maxHP;
         }
         music.healSound();
-        logMsg(`${this.name} a été soigné.`);
+        logMsg(`${this.name} a ete soigne.`);
     }
 
     upgradeAttack() {
         this.attack += 5;
-        logMsg(`${this.name} a amélioré son attaque à ${this.attack}.`);
+        logMsg(`${this.name} a ameliore son attaque a ${this.attack}.`);
     }
 
     upgradeArmor() {
         this.armor += 5;
-        logMsg(`${this.name} a amélioré son armure à ${this.armor}.`);
+        logMsg(`${this.name} a ameliore son armure a ${this.armor}.`);
     }
 
     upgradeMaxHP() {
         this.maxHP += 20;
-        logMsg(`${this.name} a augmenté ses PV maximum à ${this.maxHP}.`);
+        logMsg(`${this.name} a augmente ses PV maximum a ${this.maxHP}.`);
+    }
+
+    addMoney(amount) {
+        this.money += amount;
+        logMsg(`Vous avez gagne ${amount} pieces. Total: ${this.money} pieces.`);
     }
 
 }

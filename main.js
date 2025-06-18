@@ -1,5 +1,5 @@
 import Player from './scripts/Player.js';
-import { logMsg, update, attackButton, gameOver, addapt } from './scripts/Utils.js';
+import { logMsg, update, attackButton, gameOver } from './scripts/Utils.js';
 import {setCurrentChapter, allChapters, currentChapterNumber, setCurrentChapterNumber} from './scripts/Wave.js';
 import {saveGame, loadGame}from './scripts/Save.js';
 import * as music from './scripts/Music.js';
@@ -19,17 +19,19 @@ addapt(allChapters[currentChapterNumber].entityPokemon[0]);
 
 update(player);
 
+    document.getElementById('player-pokemon').style.opacity = '1';
     function winTheChapter() {
-    logMsg('Vous avez gagné le chapitre !');
-    music.stopCurrentMusic();
+    logMsg('Vous avez gagne le chapitre !');
+    music.stopCurrentMusic();   
     music.chapterWonSound();
+    player.addMoney(100);
     gameOver('You completed the battle!')
     //win = true;
-    setCurrentChapterNumber(currentChapterNumber + 1);
-    if(currentChapterNumber + 1 > allChapters.length) {
-        setCurrentChapter(currentChapterNumber);
-    }
-    update(player);
+    // setCurrentChapterNumber(currentChapterNumber + 1);
+    // if(currentChapterNumber + 1 > allChapters.length) {
+    //     setCurrentChapter(currentChapterNumber);
+    // }
+    // update(player);
     saveGame(player);
 };
     
@@ -58,7 +60,6 @@ attackButton.addEventListener('click', () => {
         else {
             allChapters[currentChapterNumber].entityPokemon.shift();
             allChapters[currentChapterNumber].jsonPokemon.shift();
-            addapt(allChapters[currentChapterNumber].entityPokemon[0]);
         }
         playerTurn = true;
 
@@ -68,3 +69,12 @@ attackButton.addEventListener('click', () => {
         setTimeout(ennemisTurn, 100); 
     };
 })
+
+runButton.addEventListener('click', () => {
+    logMsg('Vous avez fui le combat !');
+    music.stopCurrentMusic();
+    music.runSound();
+    gameOver('You ran away!');
+    // Reload save to previous state
+    loadGame(player);
+});

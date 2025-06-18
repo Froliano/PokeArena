@@ -1,6 +1,8 @@
 import * as music from './Music.js';
 const log = document.getElementById('log');
 
+const pokemon = document.getElementById('opponent-pokemon');
+
 function logMsg(message) {
     log.innerHTML += message + '<br>';
     log.scrollTop = log.scrollHeight;
@@ -24,13 +26,25 @@ class Entity {
             defender.currentHP = 0;
             defender.die();
         }
+        pokemon.style.animation = 'pokemonOpponentAttack 0.3s ease-in-out';
+        pokemon.addEventListener('animationend', () => {
+            pokemon.style.animation = '';
+        }, { once: true });
         music.attackSound();
-        logMsg(`attaque qui inflige ${degats} dégâts.`);
+        logMsg(`L'attaque ennemie inflige ${degats} degats.`);
     }
 
 
     die() {
         this.isAlive = false;
+        pokemon.style.animation = 'pokemonKO 0.5s';
+        pokemon.addEventListener('animationend', () => {
+            music.pokeballOutSound();
+            pokemon.style.animation = 'pokemonSpawning 1s';
+            pokemon.addEventListener('animationend', () => {
+                pokemon.style.animation = '';
+            }, { once: true });
+        }, { once: true });
     }
 }
 
