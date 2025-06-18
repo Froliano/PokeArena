@@ -1,3 +1,6 @@
+import { addapt, hideMenu, update } from "./Utils.js";
+import { setCurrentChapterNumber, currentChapterNumber, allChapters } from "./Wave.js";
+
 class Chapter
 {
     constructor(id, jsonPokemon = [], entityPokemon = [], trainer="aaron") {
@@ -14,31 +17,41 @@ class Chapter
         {
             const chapterSelection = document.getElementById("chapter-selection");
             if (chapterSelection) {
-                const div = document.createElement("div");
-                div.id = `chapter${this.id}`;
-                div.className = "chapter-cover";
-
+                const chapterElement = document.createElement("div");
+                chapterElement.id = `chapter${this.id}`;
+                chapterElement.className = "chapter-cover";
+                
                 const trainerImg = document.createElement("img");
                 trainerImg.className = "chapter-cover-trainer";
                 trainerImg.src = `https://play.pokemonshowdown.com/sprites/trainers/${this.trainer}.png`;
-
+                
                 const decorationImg = document.createElement("img");
                 decorationImg.className = "chapter-cover-decoration";
                 decorationImg.src = "/assets/img/pokeball.png";
-
+                
                 const span = document.createElement("span");
                 span.textContent = `Battle ${this.id}`;
-
-                div.appendChild(trainerImg);
-                div.appendChild(decorationImg);
-                div.appendChild(span);
-
-                chapterSelection.appendChild(div);
+                
+                chapterElement.appendChild(trainerImg);
+                chapterElement.appendChild(decorationImg);
+                chapterElement.appendChild(span);
+                
+                chapterSelection.appendChild(chapterElement);
             }
         }
+
+        document.getElementById(`chapter${this.id}`).addEventListener("click", () => {
+            console.log(`Chapter ${this.id} selected`);
+            setCurrentChapterNumber(this.id - 1);
+            console.log(`Current chapter number set to ${currentChapterNumber}`);
+            update()
+            addapt(allChapters[currentChapterNumber].entityPokemon[0]);
+            hideMenu();
+        });
+
     }
 
-    async updateChapterIcon() {
+    updateChapterIcon() {
         const trainerImg = document.getElementById("opponent-trainer");
         trainerImg.src = `https://play.pokemonshowdown.com/sprites/trainers/${this.trainer}.png`;
     }

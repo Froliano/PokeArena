@@ -1,43 +1,41 @@
-import Player from './scripts/Player.js';
-import { logMsg, update, attackButton, gameOver, addapt } from './scripts/Utils.js';
-import {setCurrentChapter, allChapters, currentChapterNumber, setCurrentChapterNumber} from './scripts/Wave.js';
+import { logMsg, update, attackButton, gameOver, addapt, unlockNextChapter, player, currentEnnemy, setCurrentEnnemy } from './scripts/Utils.js';
+import {setCurrentChapter, allChapters, currentChapterNumber, setCurrentChapterNumber, setMaxChapterNumber, maxChapterNumber} from './scripts/Wave.js';
 import {saveGame, loadGame}from './scripts/Save.js';
 import * as music from './scripts/Music.js';
 
-const player = new Player('Pikachu', 150, 80, 200);
 loadGame(player);
 
 music.playBattleMusic();
 
 let playerTurn = true;
-let win = false;
 
 const playerName = document.getElementById('pokemon-player');
 playerName.textContent = player.name;
 
-addapt(allChapters[currentChapterNumber].entityPokemon[0]);
+addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
 
-update(player);
+update();
 
-    function winTheChapter() {
+function winTheChapter() {
+    setCurrentEnnemy(0);
     logMsg('Vous avez gagné le chapitre !');
     music.stopCurrentMusic();
     music.chapterWonSound();
     gameOver('You completed the battle!')
-    //win = true;
     setCurrentChapterNumber(currentChapterNumber + 1);
+    setMaxChapterNumber(Math.max(currentChapterNumber + 1, maxChapterNumber));
     if(currentChapterNumber + 1 > allChapters.length) {
-        setCurrentChapter(currentChapterNumber);
+        setCurrentChapter(currentChapterNumber + 1);
     }
-    update(player);
     saveGame(player);
-};
-    
+    unlockNextChapter();
+;
+}
 
 function ennemisTurn() {
-    allChapters[currentChapterNumber].entityPokemon[0].actionAttack(player);
+    allChapters[currentChapterNumber].entityPokemon[currentEnnemy].actionAttack(player);
     playerTurn = true;
-    update(player);
+    update();
     attackButton.disabled = false;
     
 
@@ -45,26 +43,28 @@ function ennemisTurn() {
 
 attackButton.addEventListener('click', () => {
     attackButton.disabled = true;
-    player.actionAttack(allChapters[currentChapterNumber].entityPokemon[0]);
+    player.actionAttack(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
     playerTurn = false;
-    if (!allChapters[currentChapterNumber].entityPokemon[0].isAlive) {
-        logMsg(`${allChapters[currentChapterNumber].entityPokemon[0].name} a été vaincu !`);
+    if (!allChapters[currentChapterNumber].entityPokemon[currentEnnemy].isAlive) {
+        logMsg(`${allChapters[currentChapterNumber].entityPokemon[currentEnnemy].name} a été vaincu !`);
         attackButton.disabled = false;
 
-        if (allChapters[currentChapterNumber].entityPokemon.length === 1) {
+        if (allChapters[currentChapterNumber].entityPokemon.length === currentEnnemy + 1) {
             winTheChapter();
             return;
         }
         else {
-            allChapters[currentChapterNumber].entityPokemon.shift();
-            allChapters[currentChapterNumber].jsonPokemon.shift();
-            addapt(allChapters[currentChapterNumber].entityPokemon[0]);
+            allChapters[currentChapterNumber].entityPokemon[currentEnnemy].currentHP = allChapters[currentChapterNumber].entityPokemon[currentEnnemy].maxHP;
+            setCurrentEnnemy(currentEnnemy + 1);
+            console.log(allChapters[currentChapterNumber].entityPokemon[currentEnnemy].currentHP, allChapters[currentChapterNumber].entityPokemon[currentEnnemy].maxHP);
+            addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
+            console.log(allChapters[currentChapterNumber].entityPokemon[currentEnnemy].currentHP, allChapters[currentChapterNumber].entityPokemon[currentEnnemy].maxHP);
         }
         playerTurn = true;
 
     }
-    update(player);
-    if(!win && !playerTurn) {
+    update();
+    if(!playerTurn) {
         setTimeout(ennemisTurn, 100); 
     };
 })

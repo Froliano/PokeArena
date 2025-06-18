@@ -1,5 +1,11 @@
-import {currentChapterNumber, activePokeball, allChapters} from './Wave.js';
+import {currentChapterNumber, activePokeball, allChapters, maxChapterNumber} from './Wave.js';
 import * as music from './Music.js';
+import Player from './Player.js';
+
+
+const player = new Player('Pikachu', 150, 80, 200);
+let currentEnnemy = 0;
+
 
 const log = document.getElementById('log');
 const upgradeMenuButton = document.getElementById('upgrade-screen');
@@ -46,26 +52,27 @@ function upgradeMenu(player)
         }
         upgradeMenuButton.classList.remove('active');
         healButton.classList.remove('active');
-        update(player);
+        update();
     }, { once: true });
 
 }
 
-function update(player) {
-    opponentName.textContent = allChapters[currentChapterNumber].entityPokemon[0].name;
-    activePokeball(allChapters[currentChapterNumber].jsonPokemon.length);
+function update() {
+
+    opponentName.textContent = allChapters[currentChapterNumber].entityPokemon[currentEnnemy].name;
+    activePokeball(allChapters[currentChapterNumber].entityPokemon.length, currentEnnemy);
     allChapters[currentChapterNumber].updateChapterIcon();
     
     attackUpgradeButton.querySelector(".stat-value").textContent = player.attack;
     armorUpgradeButton.querySelector(".stat-value").textContent = player.armor;
     maxHpUpgradeButton.querySelector(".stat-value").textContent = player.maxHP;
     
-    opponentImage.src = `https://play.pokemonshowdown.com/sprites/gen5ani/${allChapters[currentChapterNumber].jsonPokemon[0].sprite}`;
+    opponentImage.src = `https://play.pokemonshowdown.com/sprites/gen5ani/${allChapters[currentChapterNumber].jsonPokemon[currentEnnemy].sprite}`;
     playerHpBar.style.width = (player.currentHP / player.maxHP * 100) + '%';
     playerXpBar.style.width = (player.xp / 100 * 100) + '%';
-    opponentHpBar.style.width = (allChapters[currentChapterNumber].entityPokemon[0].currentHP / allChapters[currentChapterNumber].entityPokemon[0].maxHP * 100) + '%';
+    opponentHpBar.style.width = (allChapters[currentChapterNumber].entityPokemon[currentEnnemy].currentHP / allChapters[currentChapterNumber].entityPokemon[currentEnnemy].maxHP * 100) + '%';
     playerHpText.textContent = `${player.currentHP} / ${player.maxHP} HP`;
-    opponentHpText.textContent = `${allChapters[currentChapterNumber].entityPokemon[0].currentHP} / ${allChapters[currentChapterNumber].entityPokemon[0].maxHP} HP`;
+    opponentHpText.textContent = `${allChapters[currentChapterNumber].entityPokemon[currentEnnemy].currentHP} / ${allChapters[currentChapterNumber].entityPokemon[currentEnnemy].maxHP} HP`;
 }
 
 function showMenu() {
@@ -101,6 +108,20 @@ function addapt(entity)
     entity.currentHP = entity.maxHP;
     entity.attack = entity.attack + (currentChapterNumber * 3);
     entity.armor = entity.armor + (currentChapterNumber * 3);
+    update();
+}
+
+function unlockNextChapter() {
+    for (let i = 1; i <= maxChapterNumber; i++) {
+        if (i <= 6) {
+            const chapterElement = document.getElementById(`chapter${i}`).classList.remove("locked");
+        }
+    }
+}
+
+function setCurrentEnnemy(index) {
+    currentEnnemy = index;
+    addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
 }
 
 window.showMenu = showMenu;
@@ -110,8 +131,12 @@ export {
     upgradeMenu,
     update,
     attackButton,
+    unlockNextChapter,
     showMenu,
     hideMenu,
     gameOver,
     addapt,
+    setCurrentEnnemy,
+    player,
+    currentEnnemy,
 };

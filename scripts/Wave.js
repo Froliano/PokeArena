@@ -3,6 +3,7 @@ import Chapter from "./Chapter.js";
 import {chapter1, chapter2, chapter3, chapter4, chapter5, chapter6} from "./initChapter.js";
 
 let currentChapterNumber = 0;
+let maxChapterNumber = currentChapterNumber;
 
 let statsData = await fetch("pokemon_stats.json");
 statsData = await statsData.json();
@@ -41,9 +42,9 @@ async function setCurrentWave() {
   }
 }
 
-function activePokeball(number) {
+function activePokeball(number, index) {
   for (let i = 0; i < 6; i++) {
-    if (i < number) {
+    if (i < number-index) {
       pokeball[i].classList.remove("none");
     } else {
       pokeball[i].classList.add("none");
@@ -55,12 +56,18 @@ function setCurrentChapterNumber(number) {
   currentChapterNumber = number;
 }
 
+function setMaxChapterNumber(number) {
+  maxChapterNumber = number;
+}
+
 export {
   currentChapter,
   currentWave,
   currentChapterNumber,
+  maxChapterNumber,
   setCurrentChapter,
   setCurrentChapterNumber,
+  setMaxChapterNumber,
   activePokeball,
   allChapters
 };
