@@ -52,6 +52,14 @@
         opacity: 0;
     }
 }
+@keyframes slideBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100vw -300px;
+  }
+}
 
 @font-face {
     font-family: 'pokeFont';
@@ -507,13 +515,16 @@ body {
     opacity: 0;
 }
 #menu-content::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url('/assets/img/menu-background.png') 500px 500px repeat;
-  opacity: 0.05;
-  z-index: -1;
-  pointer-events: none;
+    content: "";
+    width: 100vw;
+    height: 300vh;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/assets/img/menu-background.png') 500px 500px repeat;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+    animation: slideBg 100s linear infinite;
 }
 #menu.active #menu-content {
     animation: fadeIn 1s ease-in-out forwards;
@@ -632,15 +643,15 @@ body {
 
 #chapter-selection {
     position: absolute;
-    width: 30%;
+    width: 420px;
     height: calc(100% - 35px);
     padding: 20px;
     right: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-content: flex-start;
+    justify-content: center;
     gap: 20px;
     background: rgba(0, 0, 0, 0.6);
     border-left: 4px solid #393939;
