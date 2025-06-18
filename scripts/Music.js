@@ -1,4 +1,5 @@
 let BGM;
+let menuBGM;
 let menu = document.getElementById('menu');
 let firstRegisteredClick = false;
 
@@ -30,16 +31,20 @@ function playMenuMusic() {
         }, { once: true });
         return;
     }
-    BGM = new Audio('/assets/music/menu.mp3');
-    BGM.loop = true;
-    BGM.volume = 0.5;
-    BGM.play();
+    menuBGM = new Audio('/assets/music/menu.mp3');
+    menuBGM.loop = true;
+    menuBGM.volume = 0.5;
+    menuBGM.play();
 }
 
 function stopCurrentMusic() {
     if (BGM) {
         BGM.pause();
         BGM.currentTime = 0;
+    }
+    if (menuBGM) {
+        menuBGM.pause();
+        menuBGM.currentTime = 0;
     }
 }
 
