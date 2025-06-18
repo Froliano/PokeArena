@@ -6,6 +6,7 @@ class Player extends Entity {
         super(name, attack, armor, maxHP);
         this.level = level;
         this.xp = 0;
+        this.xpToNextLevel = 100;
     }
 
     die() {
@@ -14,7 +15,7 @@ class Player extends Entity {
 
     winXP(amount) {
         this.xp += amount;
-        if (this.xp >= 100) {
+        while(this.xp >= 100) {
             this.levelUp();
             this.xp -= 100;
         }
@@ -36,6 +37,7 @@ class Player extends Entity {
         this.level++;
         logMsg(`${this.name} a atteint le niveau ${this.level} !`);
         upgradeMenu(this);
+        this.xpToNextLevel = Math.round(this.xpToNextLevel * 1.2); // Augmente le coût d'XP pour le prochain niveau
     }
 
     heal() {

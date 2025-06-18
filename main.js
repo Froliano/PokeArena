@@ -15,17 +15,17 @@ let win = false;
 const playerName = document.getElementById('pokemon-player');
 playerName.textContent = player.name;
 
-if(currentChapterNumber + 1 > allChapters.length) {
-    await setCurrentChapter();
-}
-update(player, playerTurn, win);
+update(player);
 
-function winTheChapter() {
+    function winTheChapter() {
     logMsg('Vous avez gagné le chapitre !');
-    win = true;
-    saveGame(player);
-    attackButton.disabled = true;
+    //win = true;
     setCurrentChapterNumber(currentChapterNumber + 1);
+    if(currentChapterNumber + 1 > allChapters.length) {
+        setCurrentChapter(currentChapterNumber);
+    }
+    update(player);
+    saveGame(player);
 };
     
 
@@ -34,6 +34,7 @@ function ennemisTurn() {
     playerTurn = true;
     update(player);
     attackButton.disabled = false;
+    
 
 }
 
@@ -47,6 +48,7 @@ attackButton.addEventListener('click', () => {
 
         if (allChapters[currentChapterNumber].entityPokemon.length === 1) {
             winTheChapter();
+            return;
         }
         else {
             allChapters[currentChapterNumber].entityPokemon.shift();
@@ -55,7 +57,7 @@ attackButton.addEventListener('click', () => {
         playerTurn = true;
 
     }
-    update(player, playerTurn, win);
+    update(player);
     if(!win && !playerTurn) {
         setTimeout(ennemisTurn, 100); 
     };

@@ -1,4 +1,4 @@
-import { currentChapterNumber, setCurrentChapterNumber } from "./Wave.js";
+import { currentChapterNumber, setCurrentChapterNumber, allChapters, setCurrentChapter } from "./Wave.js";
 
 function saveGame(player) {
     let gameState = {
@@ -11,7 +11,7 @@ function saveGame(player) {
             xp: player.xp,
             level: player.level
         },
-        currentChapterNumber: currentChapterNumber
+        currentChapterNumber: currentChapterNumber,
     };
     
     localStorage.setItem('gameState', JSON.stringify(gameState));
@@ -28,7 +28,12 @@ function loadGame(player) {
         player.xp = gameState.player.xp;
         player.level = gameState.player.level;
         setCurrentChapterNumber(gameState.currentChapterNumber);
+
+        for (let i = 7; i <= currentChapterNumber+1; i++) {
+            setCurrentChapter(i);
+        }
     }
+
 }
 
 export { saveGame, loadGame};

@@ -4,6 +4,9 @@ import {chapter1, chapter2, chapter3, chapter4, chapter5, chapter6} from "./init
 
 let currentChapterNumber = 0;
 
+let statsData = await fetch("pokemon_stats.json");
+statsData = await statsData.json();
+
 let allChapters = [chapter1, chapter2, chapter3, chapter4, chapter5, chapter6];
 
 let currentChapter;
@@ -11,20 +14,17 @@ let currentWave;
 
 const pokeball = document.querySelectorAll("#opponent-amount img");
 
-async function setCurrentChapter() {
+function setCurrentChapter(index) {
   currentChapter = [];
   let randomNumber = Math.floor(Math.random() * 3) + 4;
-
-  let statsData = await fetch("pokemon_stats.json");
-  statsData = await statsData.json();
+  
   for (let i = 0; i < randomNumber; i++) {
     const randomIndex = Math.floor(Math.random() * statsData.length);
     let currentPokemon = statsData[randomIndex];
     currentChapter.push(currentPokemon);
   }
   setCurrentWave();
-  console.log(currentChapter);
-  let newChapter = new Chapter(currentChapterNumber, currentChapter, currentWave);
+  let newChapter = new Chapter(index, currentChapter, currentWave);
   allChapters.push(newChapter);
 }
 
