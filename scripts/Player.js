@@ -8,10 +8,12 @@ const pokemon = document.getElementById('player-pokemon');
 class Player extends Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100, level = 1) {
         super(name, attack, armor, maxHP);
+        this.name = name;
         this.level = level;
         this.xp = 0;
         this.xpToNextLevel = 100;
         this.money = 0;
+        this.currentMon = "pikachu-alola.gif";
     }
 
     die() {
@@ -85,7 +87,13 @@ class Player extends Entity {
 
     addMoney(amount) {
         this.money += amount;
+        document.querySelector('#money-amount .value').textContent = `${this.money}`;
         logMsg(`Vous avez gagne ${amount} pieces. Total: ${this.money} pieces.`);
+    }
+
+    refreshMon() {
+        pokemon.src = `https://play.pokemonshowdown.com/sprites/gen5ani-back/${this.currentMon}`;
+        logMsg(`${this.name} a change de Pokemon en ${this.currentMon}.`);
     }
 
 }

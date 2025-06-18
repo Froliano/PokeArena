@@ -24,6 +24,7 @@ const attackButton = document.getElementById('attack-button');
 const runButton = document.getElementById('run-button');
 const opponentName = document.getElementById('pokemon-opponent');
 const opponentImage = document.getElementById('opponent-pokemon');
+const playerName = document.getElementById('pokemon-player');
 
 const menu = document.getElementById('menu');
 
@@ -61,6 +62,7 @@ function upgradeMenu(player)
 function update() {
 
     opponentName.textContent = allChapters[currentChapterNumber].entityPokemon[currentEnnemy].name;
+    playerName.textContent = player.name;
     activePokeball(allChapters[currentChapterNumber].entityPokemon.length, currentEnnemy);
     allChapters[currentChapterNumber].updateChapterIcon();
     

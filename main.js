@@ -12,6 +12,8 @@ let playerTurn = true;
 const playerName = document.getElementById('pokemon-player');
 const runButton = document.getElementById('run-button');
 playerName.textContent = player.name;
+const eeveeSelect = document.getElementById('player-eevee');
+const pikachuSelect = document.getElementById('player-pikachu');
 
 addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
 
@@ -78,4 +80,28 @@ runButton.addEventListener('click', () => {
     gameOver('You ran away!');
     // Reload save to previous state
     loadGame(player);
+});
+
+eeveeSelect.addEventListener('click', () => {
+    // Check if player has 1000 money
+    if (eeveeSelect.classList.contains('locked')) {
+        if (player.money >= 1) {
+            player.currentMon = 'eevee.gif';
+            player.name = 'Eevee';
+            player.money -= 1000;
+            player.refreshMon();
+            eeveeSelect.classList.remove('locked')
+        }
+    } else {
+        player.currentMon = 'eevee.gif';
+        player.name = 'Eevee';
+        player.refreshMon();
+    }
+
+});
+
+pikachuSelect.addEventListener('click', () => {
+    player.currentMon = 'pikachu-alola.gif';
+    player.name = 'Pikachu';
+    player.refreshMon();
 });

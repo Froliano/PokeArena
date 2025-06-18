@@ -744,6 +744,9 @@ body {
     opacity: 0.6;
     pointer-events: none;
 }
+#player-eevee.locked {
+    pointer-events: all;
+}
 .chapter-cover span {
     position: absolute;
     bottom: 0;
@@ -827,7 +830,7 @@ body {
     opacity: 0.7;
 }
 
-#moneyAmount {
+#money-amount {
     position: absolute;
     z-index: 5;
     top: 140px;
