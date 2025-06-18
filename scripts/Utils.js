@@ -115,7 +115,7 @@ function addapt(entity)
 function unlockNextChapter() {
     for (let i = 1; i <= maxChapterNumber; i++) {
         if (i <= 6) {
-            const chapterElement = document.getElementById(`chapter${i}`).classList.remove("locked");
+            document.getElementById(`chapter${i}`).classList.remove("locked");
         }
     }
 }

@@ -56,9 +56,11 @@ attackButton.addEventListener('click', () => {
             return;
         }
         else {
-            allChapters[currentChapterNumber].entityPokemon.shift();
-            allChapters[currentChapterNumber].jsonPokemon.shift();
-            addapt(allChapters[currentChapterNumber].entityPokemon[0]);
+            setTimeout(() => {
+                allChapters[currentChapterNumber].entityPokemon.shift();
+                allChapters[currentChapterNumber].jsonPokemon.shift();
+                addapt(allChapters[currentChapterNumber].entityPokemon[0]);
+            }, 500);
         }
         playerTurn = true;
 
