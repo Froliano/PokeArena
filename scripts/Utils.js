@@ -86,6 +86,15 @@ function hideMenu() {
     }
 }
 
+function gameOver(message) {
+    document.getElementById('game-over').classList.add('active');
+    document.getElementById('game-over-message').textContent = message;
+    setTimeout(() => {
+        document.getElementById('game-over').classList.remove('active');
+        showMenu();
+    }, 3000);
+}
+
 window.showMenu = showMenu;
 window.hideMenu = hideMenu;
 export { 
@@ -95,4 +104,5 @@ export {
     attackButton,
     showMenu,
     hideMenu,
+    gameOver,
 };

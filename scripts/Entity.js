@@ -1,3 +1,4 @@
+import * as music from './Music.js';
 const log = document.getElementById('log');
 
 function logMsg(message) {
@@ -23,6 +24,7 @@ class Entity {
             defender.currentHP = 0;
             defender.die();
         }
+        music.attackSound();
         logMsg(`attaque qui inflige ${degats} dégâts.`);
     }
 

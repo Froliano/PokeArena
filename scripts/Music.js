@@ -19,7 +19,7 @@ function playBattleMusic() {
     }
     BGM = new Audio('/assets/music/battleMusic.mp3');
     BGM.loop = true;
-    BGM.volume = 0.5;
+    BGM.volume = 0.3;
     BGM.play()
 }
 
@@ -43,4 +43,28 @@ function stopCurrentMusic() {
     }
 }
 
-export { playBattleMusic, playMenuMusic, stopCurrentMusic };
+function attackSound() {
+    const attackAudio = new Audio('/assets/music/damageSound.mp3');
+    attackAudio.volume = 1;
+    attackAudio.play();
+}
+
+function levelUpSound() {
+    const levelUpAudio = new Audio('/assets/music/levelUp.wav');
+    levelUpAudio.volume = 1;
+    levelUpAudio.play();
+}
+
+function healSound() {
+    const healAudio = new Audio('/assets/music/heal.wav');
+    healAudio.volume = 1;
+    healAudio.play();
+}
+
+function chapterWonSound() {
+    const chapterWonAudio = new Audio('/assets/music/chapterWon.wav');
+    chapterWonAudio.volume = 1;
+    chapterWonAudio.play();
+}
+
+export { playBattleMusic, playMenuMusic, stopCurrentMusic, attackSound, levelUpSound, healSound, chapterWonSound };

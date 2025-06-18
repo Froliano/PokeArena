@@ -1,10 +1,10 @@
 import Player from './scripts/Player.js';
-import { logMsg, update, attackButton } from './scripts/Utils.js';
+import { logMsg, update, attackButton, gameOver } from './scripts/Utils.js';
 import {setCurrentChapter, allChapters, currentChapterNumber, setCurrentChapterNumber} from './scripts/Wave.js';
 import {saveGame, loadGame}from './scripts/Save.js';
 import * as music from './scripts/Music.js';
 
-const player = new Player('Heros', 300, 50, 200);
+const player = new Player('Pikachu', 150, 80, 200);
 loadGame(player);
 
 music.playBattleMusic();
@@ -19,6 +19,9 @@ update(player);
 
     function winTheChapter() {
     logMsg('Vous avez gagné le chapitre !');
+    music.stopCurrentMusic();
+    music.chapterWonSound();
+    gameOver('You completed the battle!')
     //win = true;
     setCurrentChapterNumber(currentChapterNumber + 1);
     if(currentChapterNumber + 1 > allChapters.length) {

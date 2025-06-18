@@ -1,5 +1,6 @@
 import Entity from './Entity.js';
-import { logMsg, upgradeMenu } from './Utils.js';
+import { logMsg, showMenu, upgradeMenu, gameOver } from './Utils.js';
+import * as music from './Music.js';
 
 class Player extends Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100, level = 1) {
@@ -11,6 +12,7 @@ class Player extends Entity {
 
     die() {
         console.log(`${this.name} has died.`);
+        gameOver(`${this.name} blacked out!`);
     }
 
     winXP(amount) {
@@ -18,6 +20,7 @@ class Player extends Entity {
         while(this.xp >= 100) {
             this.levelUp();
             this.xp -= 100;
+            music.levelUpSound();
         }
     }
 
@@ -28,8 +31,9 @@ class Player extends Entity {
         if (defender.currentHP <= 0) {
             defender.currentHP = 0;
             defender.die();
-            this.winXP(0);
+            this.winXP(50);
         }
+        music.attackSound();
         logMsg(`attaque qui inflige ${degats} dégâts.`);
     }
 
@@ -45,6 +49,7 @@ class Player extends Entity {
         if (this.currentHP > this.maxHP) {
             this.currentHP = this.maxHP;
         }
+        music.healSound();
         logMsg(`${this.name} a été soigné.`);
     }
 
