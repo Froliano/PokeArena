@@ -1,10 +1,10 @@
-import Player from './Player.js';
-import { logMsg } from './Utils.js';
-import {currentChapter, currentWave, setCurrentChapterchapter} from './Wave.js';
-import {saveGame, loadGame}from './Save.js';
+import Player from './scripts/Player.js';
+import { logMsg } from './scripts/Utils.js';
+import {currentChapter, currentWave, setCurrentChapterchapter, activePokeball} from './scripts/Wave.js';
+import {saveGame, loadGame}from './scripts/Save.js';
 
 const player = new Player('Heros', 100, 50, 200);
-loadGame();
+loadGame(player);
 
 let playerTurn = true;
 let win = false;
@@ -26,6 +26,7 @@ update();
 
 async function update() {
     opponentName.textContent = currentWave[0].name;
+    activePokeball(currentWave.length);
     opponentImage.src = `https://play.pokemonshowdown.com/sprites/gen5ani/${currentChapter[0].sprite}`;
     playerHpBar.style.width = (player.currentHP / player.maxHP * 100) + '%';
     playerXpBar.style.width = (player.xp / 100 * 100) + '%';
@@ -52,6 +53,8 @@ attackButton.addEventListener('click', () => {
     player.actionAttack(currentWave[0]);
     playerTurn = false;
     if (!currentWave[0].isAlive) {
+        logMsg(`${currentWave[0].name} a été vaincu !`);
+
         if (currentWave.length === 1) {
             winTheChapter();
         }
@@ -60,7 +63,6 @@ attackButton.addEventListener('click', () => {
             currentChapter.shift();
         }
         playerTurn = true;
-        logMsg(`${currentWave[0].name} a été vaincu !`);
     }
     update();
     if(!win && !playerTurn) {

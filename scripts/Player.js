@@ -1,5 +1,5 @@
 import Entity from './Entity.js';
-import { logMsg } from './Utils.js';
+import { logMsg, upgradeMenu } from './Utils.js';
 
 class Player extends Entity {
     constructor(name, attack = 15, armor = 20, maxHP = 100, level = 1) {
@@ -35,6 +35,7 @@ class Player extends Entity {
     levelUp() {
         this.level++;
         logMsg(`${this.name} a atteint le niveau ${this.level} !`);
+        upgradeMenu();
     }
 
 }
