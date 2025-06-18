@@ -10,6 +10,7 @@ music.playBattleMusic();
 let playerTurn = true;
 
 const playerName = document.getElementById('pokemon-player');
+const runButton = document.getElementById('run-button');
 playerName.textContent = player.name;
 
 addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
