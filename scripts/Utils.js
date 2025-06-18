@@ -21,6 +21,7 @@ const opponentHpBar = document.getElementById('opponent-hp');
 const playerHpText = document.getElementById('player-hp-text');
 const opponentHpText = document.getElementById('opponent-hp-text');
 const attackButton = document.getElementById('attack-button');
+const runButton = document.getElementById('run-button');
 const opponentName = document.getElementById('pokemon-opponent');
 const opponentImage = document.getElementById('opponent-pokemon');
 
@@ -132,6 +133,7 @@ export {
     update,
     attackButton,
     unlockNextChapter,
+    runButton,
     showMenu,
     hideMenu,
     gameOver,

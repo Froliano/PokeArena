@@ -16,17 +16,18 @@ addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
 
 update();
 
-function winTheChapter() {
-    setCurrentEnnemy(0);
+    function winTheChapter() {
     logMsg('Vous avez gagné le chapitre !');
     music.stopCurrentMusic();
     music.chapterWonSound();
+    player.addMoney(100);
     gameOver('You completed the battle!')
+    //win = true;
     setCurrentChapterNumber(currentChapterNumber + 1);
-    setMaxChapterNumber(Math.max(currentChapterNumber + 1, maxChapterNumber));
     if(currentChapterNumber + 1 > allChapters.length) {
-        setCurrentChapter(currentChapterNumber + 1);
+        setCurrentChapter(currentChapterNumber);
     }
+    update(player);
     saveGame(player);
     unlockNextChapter();
 ;
@@ -54,11 +55,9 @@ attackButton.addEventListener('click', () => {
             return;
         }
         else {
-            allChapters[currentChapterNumber].entityPokemon[currentEnnemy].currentHP = allChapters[currentChapterNumber].entityPokemon[currentEnnemy].maxHP;
-            setCurrentEnnemy(currentEnnemy + 1);
-            console.log(allChapters[currentChapterNumber].entityPokemon[currentEnnemy].currentHP, allChapters[currentChapterNumber].entityPokemon[currentEnnemy].maxHP);
-            addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
-            console.log(allChapters[currentChapterNumber].entityPokemon[currentEnnemy].currentHP, allChapters[currentChapterNumber].entityPokemon[currentEnnemy].maxHP);
+            allChapters[currentChapterNumber].entityPokemon.shift();
+            allChapters[currentChapterNumber].jsonPokemon.shift();
+            addapt(allChapters[currentChapterNumber].entityPokemon[0]);
         }
         playerTurn = true;
 
@@ -68,3 +67,12 @@ attackButton.addEventListener('click', () => {
         setTimeout(ennemisTurn, 100); 
     };
 })
+
+runButton.addEventListener('click', () => {
+    logMsg('Vous avez fui le combat !');
+    music.stopCurrentMusic();
+    music.runSound();
+    gameOver('You ran away!');
+    // Reload save to previous state
+    loadGame(player);
+});

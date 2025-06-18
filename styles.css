@@ -60,6 +60,59 @@
     background-position: -100vw -300px;
   }
 }
+@keyframes pokemonOpponentAttack {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes pokemonAttack {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes pokemonKO {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+@keyframes pokemonSpawning {
+    0% {
+        transform: scale(0) translateY(-100px);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1.4) translateY(-100px);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1) translateY(-100px);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1) translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
 
 @font-face {
     font-family: 'pokeFont';
@@ -663,7 +716,7 @@ body {
 .chapter-selection-title {
     position: absolute;
     top: 20px;
-    left: -90px;
+    right: 475px;
     width: fit-content;
     height: fit-content;
     text-wrap: nowrap;
@@ -760,4 +813,29 @@ body {
 
 #game-over-message {
     margin-bottom: 20px;
+}
+
+.copyrights {
+    z-index: 15;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-family: 'pokeFont', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.7;
+}
+
+#moneyAmount {
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    left: 20px;
+    font-family: 'pokeFont', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
