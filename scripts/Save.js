@@ -37,7 +37,7 @@ function loadGame(player) {
         setMaxChapterNumber(gameState.maxChapterNumber);
 
         for (let i = 7; i <= currentChapterNumber+1; i++) {
-            setCurrentChapter(i);
+            setCurrentChapter(i-1);
         }
 
         unlockNextChapter();

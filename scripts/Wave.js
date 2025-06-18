@@ -25,6 +25,7 @@ function setCurrentChapter(index) {
     currentChapter.push(currentPokemon);
   }
   setCurrentWave();
+  console.log(`Current Chapter: ${index}`);
   let newChapter = new Chapter(index + 1, currentChapter, currentWave);
   allChapters.push(newChapter);
 }
