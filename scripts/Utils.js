@@ -60,7 +60,6 @@ function upgradeMenu(player)
 }
 
 function update() {
-
     opponentName.textContent = allChapters[currentChapterNumber].entityPokemon[currentEnnemy].name;
     playerName.textContent = player.name;
     activePokeball(allChapters[currentChapterNumber].entityPokemon.length, currentEnnemy);

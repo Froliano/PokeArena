@@ -1,4 +1,4 @@
-import { logMsg, update, attackButton, gameOver, addapt, unlockNextChapter, player, currentEnnemy, setCurrentEnnemy } from './scripts/Utils.js';
+import { logMsg, update, attackButton, gameOver, addapt, unlockNextChapter, player, currentEnnemy, setCurrentEnnemy, showMenu } from './scripts/Utils.js';
 import {setCurrentChapter, allChapters, currentChapterNumber, setCurrentChapterNumber, setMaxChapterNumber, maxChapterNumber} from './scripts/Wave.js';
 import {saveGame, loadGame}from './scripts/Save.js';
 import * as music from './scripts/Music.js';
@@ -18,8 +18,10 @@ const pikachuSelect = document.getElementById('player-pikachu');
 addapt(allChapters[currentChapterNumber].entityPokemon[currentEnnemy]);
 
 update();
+showMenu();
 
 function winTheChapter() {
+    setCurrentEnnemy(0);
     logMsg('Vous avez gagné le chapitre !');
     music.stopCurrentMusic();
     music.chapterWonSound();
@@ -58,10 +60,10 @@ attackButton.addEventListener('click', () => {
             return;
         }
         else {
+            attackButton.disabled = true;
             setTimeout(() => {
-                allChapters[currentChapterNumber].entityPokemon.shift();
-                allChapters[currentChapterNumber].jsonPokemon.shift();
-                addapt(allChapters[currentChapterNumber].entityPokemon[0]);
+                setCurrentEnnemy(currentEnnemy + 1);
+                attackButton.disabled = false;
             }, 500);
         }
         playerTurn = true;

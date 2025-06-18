@@ -2,6 +2,7 @@ import Entity from './Entity.js';
 import { logMsg, showMenu, upgradeMenu, gameOver } from './Utils.js';
 import * as music from './Music.js';
 import { currentChapterNumber } from './Wave.js';
+import { loadGame } from './Save.js';
 
 const pokemon = document.getElementById('player-pokemon');
 
@@ -21,9 +22,16 @@ class Player extends Entity {
         pokemon.style.animation = 'pokemonKO 0.5s';
         pokemon.addEventListener('animationend', () => {
             pokemon.style.opacity = '0';
+            setTimeout(() => {
+                pokemon.style.animation ='';
+                pokemon.style.opacity = '1';
+                loadGame(this);
+                this.currentHP = this.maxHP;
+            },3000);
         }, { once: true });
         music.stopCurrentMusic();
         gameOver(`${this.name} blacked out!`);
+
     }
 
     winXP(amount) {

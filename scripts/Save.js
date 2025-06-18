@@ -10,7 +10,9 @@ function saveGame(player) {
             attack: player.attack,
             armor: player.armor,
             xp: player.xp,
-            level: player.level
+            level: player.level,
+            money: player.money,
+            currentMon: player.currentMon
         },
         currentChapterNumber: currentChapterNumber,
         maxChapterNumber: maxChapterNumber
@@ -29,6 +31,8 @@ function loadGame(player) {
         player.armor = gameState.player.armor;
         player.xp = gameState.player.xp;
         player.level = gameState.player.level;
+        player.money = gameState.player.money;
+        player.currentMon = gameState.player.currentMon;
         setCurrentChapterNumber(gameState.currentChapterNumber);
         setMaxChapterNumber(gameState.maxChapterNumber);
 
