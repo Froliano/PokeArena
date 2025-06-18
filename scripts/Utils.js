@@ -1,4 +1,5 @@
 import {currentChapterNumber, activePokeball, allChapters} from './Wave.js';
+import * as music from './Music.js';
 
 const log = document.getElementById('log');
 const upgradeMenuButton = document.getElementById('upgrade-screen');
@@ -16,6 +17,8 @@ const opponentHpText = document.getElementById('opponent-hp-text');
 const attackButton = document.getElementById('attack-button');
 const opponentName = document.getElementById('pokemon-opponent');
 const opponentImage = document.getElementById('opponent-pokemon');
+
+const menu = document.getElementById('menu');
 
 function logMsg(message) {
     log.innerHTML += message + '<br>';
@@ -65,9 +68,31 @@ function update(player) {
     opponentHpText.textContent = `${allChapters[currentChapterNumber].entityPokemon[0].currentHP} / ${allChapters[currentChapterNumber].entityPokemon[0].maxHP} HP`;
 }
 
+function showMenu() {
+    if (!menu.classList.contains('active')) {
+        menu.classList.remove('inactive');
+        menu.classList.add('active');
+        music.stopCurrentMusic();
+        music.playMenuMusic();
+    }
+}
+
+function hideMenu() {
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        menu.classList.add('inactive');
+        music.stopCurrentMusic();
+        music.playBattleMusic();
+    }
+}
+
+window.showMenu = showMenu;
+window.hideMenu = hideMenu;
 export { 
     logMsg, 
     upgradeMenu,
     update,
-    attackButton
+    attackButton,
+    showMenu,
+    hideMenu,
 };
