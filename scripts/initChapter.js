@@ -52,7 +52,7 @@ let chapter1 = new Chapter(1, [
     new Entity("Dodrio", 87, 79, 74),
     new Entity("Doduo", 82, 83, 82),
     new Entity("Exeggutor", 68, 77, 79)
-], "ash-hoenn");
+], "camper-gen6");
 
 let chapter2 = new Chapter(2, [
     {
@@ -97,7 +97,7 @@ let chapter2 = new Chapter(2, [
     new Entity("Charmander", 85, 76, 76),
     new Entity("Magmar", 62, 86, 82),
     new Entity("Cloyster", 84, 67, 81)
-], "ash-johto");
+], "hilbert-wonderlauncher");
 
 let chapter3 = new Chapter(3, [
     {
@@ -150,7 +150,7 @@ let chapter3 = new Chapter(3, [
     new Entity("Onix", 79, 75, 90),
     new Entity("Venusaur", 66, 86, 62),
     new Entity("Dodrio", 87, 79, 74)
-], "ash-kanto");
+], "n-masters");
 
 let chapter4 = new Chapter(4, [
     {
@@ -195,7 +195,7 @@ let chapter4 = new Chapter(4, [
     new Entity("Dratini", 85, 60, 89),
     new Entity("Kakuna", 82, 90, 87),
     new Entity("Poliwhirl", 63, 87, 88)
-], "ash-sinnoh");
+], "blue-masters");
 
 let chapter5 = new Chapter(5, [
     {
@@ -240,7 +240,7 @@ let chapter5 = new Chapter(5, [
     new Entity("Mewtwo", 63, 88, 68),
     new Entity("Golduck", 82, 87, 60),
     new Entity("Jolteon", 61, 72, 78)
-], "ash-unova");
+], "red-masters");
 
 let chapter6 = new Chapter(6, [
     {
@@ -293,6 +293,6 @@ let chapter6 = new Chapter(6, [
     new Entity("Zapdos", 80, 87, 85),
     new Entity("Haunter", 89, 89, 84),
     new Entity("Spearow", 67, 65, 80)
-], "ash-kalos");
+], "cynthia-gen7");
 
 export {chapter1, chapter2, chapter3, chapter4, chapter5, chapter6};

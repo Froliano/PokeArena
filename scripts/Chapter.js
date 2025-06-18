@@ -5,13 +5,13 @@ class Chapter
         this.jsonPokemon = jsonPokemon;
         this.entityPokemon = entityPokemon;
         this.trainer = trainer;
-        const chapterIcon = document.getElementById(`chapter-${this.id}`).querySelector(".chapter-cover-trainer");
-        chapterIcon.src = `https://play.pokemonshowdown.com/sprites/trainers/${trainer}.png`;
+        const chapterIcon = document.getElementById(`chapter${this.id}`).querySelector(".chapter-cover-trainer");
+        chapterIcon.src = `https://play.pokemonshowdown.com/sprites/trainers/${this.trainer}.png`;
     }
 
     async updateChapterIcon() {
         const trainerImg = document.getElementById("opponent-trainer");
-        trainerImg.src = `https://play.pokemonshowdown.com/sprites/trainers/${trainer}.png`;
+        trainerImg.src = `https://play.pokemonshowdown.com/sprites/trainers/${this.trainer}.png`;
     }
 
     
